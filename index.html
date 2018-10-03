@@ -34,10 +34,24 @@ if(random % 2 == 0) {
    document.getElementById("cond").innerHTML = "Our random number = " + random +
       ". Our conditional statement checks to see if it's divisible by 2, which it is.";
    }
-if (random % 2 != 0) {
+else if (random % 2 != 0) {
    document.getElementById("cond").innerHTML = "Our random number = " + random +
       ". Our conditional statement checks to see if it's divisible by 2, which it is not.";
    }
+if (random == 0) {
+   document.getElementById("cond").innerHTML = "Our random number is 0";
+}
+
+switch(random){
+   case 0:
+      document.getElementById("cond").innerHTML += " Case 0 activated";
+      break;
+   case 1:
+      document.getElementById("cond").innerHTML += " Case 1 activated";
+      break;
+   default:
+      document.getElementById("cond").innerHTML += " Default case activated"; 
+}
 
    // Functions
 
