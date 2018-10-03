@@ -54,31 +54,32 @@ switch(random){
 }
 
    // Variables, Parameters, Functions
-  
 var n1 = 0, n2 = 1, n3 = 2;
 
 document.getElementById("func").innerHTML = "Adding the numbers gives us: " + addNumbers(n1, n2, n3);
 document.getElementById("param").innerHTML = "Parameters passed are n1=" + n1 + ", n2=" + n2 + ", and n3=" + n3;
 document.getElementById("var").innerHTML = "Variables used are n1, n2, n3."
+
 function addNumbers(num1, num2, num3) {
    return num1 + num2 + num3;
 }
 
    // Arrays
-var array = [0, 1, 2, 3, 4, 5];
+var array = [0, 1, 2, 3, 4, 5]; // created array with literal values
 var arrayNew = new Array(5, 6, 7, 8); // creates array with 4 elements
 var arrayBust = new Array(4); // also creates array with 4 elements *AVOID* the array is undefined right now
+arrayNew.push(1);
 
-document.getElementById("array").innerHTML = array;
-document.getElementById("array").innerHTML += "," + arrayNew[1];
+document.getElementById("array").innerHTML = array; // outputs entire array values
+document.getElementById("array").innerHTML += "," + arrayNew[1]; // outputs selected array value at desired index
+document.getElementById("array").innerHTML += " The last element in arrayNew is " + arrayNew.length-1; // outputs last value in arrayNew (should be 1 from push)
 
    // Associative Arrays
-
 var assocArrayObject = {one: 1, two: 2}; // this creates an object, not an array (workaround)
 assocArrayObject.one = 2;
 assocArrayObject.two = 3;
 document.getElementById("assoArr").innerHTML = "assocArrayObject.one = " + assocArrayObject.one + 
-   "assocArrayObject.two = " + assocArrayObject.two;
+   " assocArrayObject.two = " + assocArrayObject.two;
 
 </script>
 
