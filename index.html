@@ -6,6 +6,8 @@
 
 <h3>Loops</h3>
 <p id="loops"></p>
+<p id="while"></p>
+<p id="forin"></p>
 <h3>Conditional Statements</h3>
 <p id="cond"></p>
 <h3>Functions</h3>
@@ -28,6 +30,17 @@ n++;
 }
 document.getElementById("loops").innerHTML = "n started as 0. After our loop ends, n = " + n;
 
+while (n % 2 != 0) {
+   document.getElementById("while").innerHTML += "**n is odd NOW**";
+}
+
+var me = {name: "Chris", action: "drives", vehicle: "a truck"};
+var text ="";
+var x;
+for (x in me) {
+   text += me[x];
+}
+document.getElementById("forin").innerHTML = text;
    // Conditional Statements
 var random = Math.floor(Math.random() * 10); // creates random integer from 0 to 9
 if(random % 2 == 0) {
