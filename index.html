@@ -29,7 +29,7 @@ n++;
 document.getElementById("loops").innerHTML = "n started as 0. After our loop ends, n = " + n;
 
    // Conditional Statements
-var random = Math.random(); // creates random number
+var random = Math.floor(Math.random() * 10); // creates random integer from 0 to 9
 if(random % 2 == 0) {
    document.getElementById("cond").innerHTML = "Our random number = " + random +
       ". Our conditional statement checks to see if it's divisible by 2, which it is.";
