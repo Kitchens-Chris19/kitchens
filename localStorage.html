@@ -18,6 +18,10 @@
             name = prompt("Please enter your name", "No name entered");
             age = prompt("Please enter your age.", "No age entered");
             location = prompt("Please enter your location", "No location entered");
+
+            document.getElementById("name").innerHTML = name;
+            document.getElementById("age").innerHTML = age;
+            document.getElementById("location").innerHTML = location;
          }
 
          // saves data to local storage
