@@ -3,6 +3,12 @@
    <body>
       <h2>Local Storage</h2>
 
-      <p></p>
+      <p id="name">Name</p>
+      <script>
+         var user = "blank";
+         localStorage.setItem("name", user);
+         document.getElementById("name").innerHTML = localStorage.getItem("name");
+         
+      </script>
    </body>
 </html>
