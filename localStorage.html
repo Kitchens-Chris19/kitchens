@@ -4,13 +4,30 @@
       <h2>Local Storage</h2>
 
       <p id="name">Name</p>
-      <button id="swapNameButton" value="Swap Name" onclick=swapName()>
-      <script>
-         var user = "blank";
-         localStorage.setItem("name", user);
+      <p id="age">Age</p>
+      <p id="location">Location</p>
 
-         function swapName() {
+      <button type = "button" id="saveStorage" onclick=saveStorage()>Save to local storage</button>
+      <button type = "button" id="loadStorage" onclick=loadStorage()>Load data</button>
+
+      <script>
+         var name = prompt("Please enter your name", "No name entered");
+         var age = prompt("Please enter your age.", "No age entered");
+         var location = prompt("Please enter your location", "No location entered");
+
+         // saves data to local storage
+         function saveStorage() {
+            // if no variable is present then the setItem adds a new variable with the key you enter
+            localStorage.setItem("name", name);
+            localStorage.setItem("age", age);
+            localStorage.setItem("location", location);
+         }
+
+         // loads data from storage to html
+         function loadStorage() {
             document.getElementById("name").innerHTML = localStorage.getItem("name");
+            document.getElementById("age").innerHTML = localStorage.getItem("age");
+            document.getElementById("location").innerHTML = localStorage.getItem("location");
          }
          
          
