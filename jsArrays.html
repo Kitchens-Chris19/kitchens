@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Arrays</h2>
+
+<h3>Loops</h3>
+<p id="loops"></p>
+<p id="while"></p>
+<p id="forin"></p>
+<h3>Conditional Statements</h3>
+<p id="cond"></p>
+<h3>Functions</h3>
+<p id="func"></p>
+<h3>Variables</h3>
+<p id="var"></p>
+<h3>Parameters</h3>
+<p id="param"></p>
+<h3>Arrays</h3>
+<p id="array"></p>
+<h3>Associative Arrays</h3>
+<p id="assoArr"></p>
+
+<script>
+
+   // Loops
+var n = 0;
+for(i = 10; i > 0; i--) {
+n++;
+}
+document.getElementById("loops").innerHTML = "n started as 0. After our loop ends, n = " + n;
+
+while (n % 2 != 0) {
+   document.getElementById("while").innerHTML += "**n is odd NOW**";
+}
+
+var me = {name: "Chris", action: "drives", vehicle: "a truck"};
+var text ="";
+var x;
+for (x in me) {
+   text += me[x];
+}
+document.getElementById("forin").innerHTML = text;
+   // Conditional Statements
+var random = Math.floor(Math.random() * 10); // creates random integer from 0 to 9
+if(random % 2 == 0) {
+   document.getElementById("cond").innerHTML = "Our random number = " + random +
+      ". Our conditional statement checks to see if it's divisible by 2, which it is.";
+   }
+else if (random % 2 != 0) {
+   document.getElementById("cond").innerHTML = "Our random number = " + random +
+      ". Our conditional statement checks to see if it's divisible by 2, which it is not.";
+   }
+if (random == 0) {
+   document.getElementById("cond").innerHTML = "Our random number is 0";
+}
+
+switch(random){
+   case 0:
+      document.getElementById("cond").innerHTML += " Case 0 activated";
+      break;
+   case 1:
+      document.getElementById("cond").innerHTML += " Case 1 activated";
+      break;
+   default:
+      document.getElementById("cond").innerHTML += " Default case activated"; 
+}
+
+   // Variables, Parameters, Functions
+var n1 = 0, n2 = 1, n3 = 2;
+
+document.getElementById("func").innerHTML = "Adding the numbers gives us: " + addNumbers(n1, n2, n3);
+document.getElementById("param").innerHTML = "Parameters passed are n1=" + n1 + ", n2=" + n2 + ", and n3=" + n3;
+document.getElementById("var").innerHTML = "Variables used are n1, n2, n3."
+
+function addNumbers(num1, num2, num3) {
+   return num1 + num2 + num3;
+}
+
+   // Arrays
+var array = [0, 1, 2, 3, 4, 5]; // created array with literal values
+var arrayNew = new Array(5, 6, 7, 8); // creates array with 4 elements
+var arrayBust = new Array(4); // also creates array with 4 elements *AVOID* the array is undefined right now
+arrayNew.push(1);
+
+document.getElementById("array").innerHTML = array; // outputs entire array values
+document.getElementById("array").innerHTML += "," + arrayNew[1]; // outputs selected array value at desired index
+document.getElementById("array").innerHTML += " The last element in arrayNew is " + arrayNew[arrayNew.length-1]; // outputs last value in arrayNew (should be 1 from push)
+
+   // Associative Arrays
+var assocArrayObject = {one: 1, two: 2}; // this creates an object, not an array (workaround)
+assocArrayObject.one = 2;
+assocArrayObject.two = 3;
+document.getElementById("assoArr").innerHTML = "assocArrayObject.one = " + assocArrayObject.one + 
+   " assocArrayObject.two = " + assocArrayObject.two;
+
+   // Javascript Object
+var chrisObj = {name: "Chris", job: "Unemployed", location: "South Carolina"};
+</script>
+</body>
+</html>
