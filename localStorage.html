@@ -4,10 +4,15 @@
       <h2>Local Storage</h2>
 
       <p id="name">Name</p>
+      <button id="swapNameButton" value="Swap Name" onclick=swapName()>
       <script>
          var user = "blank";
          localStorage.setItem("name", user);
-         document.getElementById("name").innerHTML = localStorage.getItem("name");
+
+         function swapName() {
+            document.getElementById("name").innerHTML = localStorage.getItem("name");
+         }
+         
          
       </script>
    </body>
