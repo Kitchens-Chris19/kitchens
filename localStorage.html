@@ -39,7 +39,33 @@
             document.getElementById("age").innerHTML = localStorage.getItem("age");
             document.getElementById("location").innerHTML = localStorage.getItem("location");
          }
-         
+      </script>
+
+      <!-- Same as above just with an associative array - aka JavaScript object -->
+      <p id="objectName">ObjectName</p>
+      <p id="objectAge">ObjectAge</p>
+      <p id="objectLoc">ObjectLoc</p>
+
+      <button type="button" id="saveObject" onclick= saveAssocArray()>Save Object</button>
+      <button type="button" id="loadObject" onclick= loadObject()>Load Object</button>
+
+      <script>
+         var associativeArray = {name: "name", age: "age", loc: "location"};
+
+         function saveAssocArray() {
+            associativeArray.name = "Rufeo";
+            associativeArray.age = "15";
+            associativeArray.loc = "Neverland";
+            localStorage.setItem("object", associativeArray);
+         }
+
+         function loadObject() {
+            associativeArray = localStorage.getItem("object");
+            document.getElementById("objectName").innerHTML = associativeArray.name;
+            document.getElementById("objectAge").innerHTML = associativeArray.age;
+            document.getElementById("objectLoc").innerHTML = associativeArray.loc;
+         }
+
          
       </script>
    </body>
