@@ -12,16 +12,16 @@
       <button type = "button" id="loadStorage" onclick=loadStorage()>Load data</button>
 
       <script>
-         var name, age, location;
+         var name, age, loc;
 
          function getData() {
             name = prompt("Please enter your name", "No name entered");
             age = prompt("Please enter your age.", "No age entered");
-            location = prompt("Please enter your location", "No location entered");
+            loc = prompt("Please enter your location", "No location entered");
 
             document.getElementById("name").innerHTML = name;
             document.getElementById("age").innerHTML = age;
-            document.getElementById("location").innerHTML = location;
+            document.getElementById("location").innerHTML = loc;
          }
 
          // saves data to local storage
@@ -29,7 +29,7 @@
             // if no variable is present then the setItem adds a new variable with the key you enter
             localStorage.setItem("name", name);
             localStorage.setItem("age", age);
-            localStorage.setItem("location", location);
+            localStorage.setItem("location", loc);
          }
 
          // loads data from storage to html
