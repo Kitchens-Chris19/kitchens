@@ -56,11 +56,13 @@
             associativeArray.name = "Rufeo";
             associativeArray.age = "15";
             associativeArray.loc = "Neverland";
-            localStorage.setItem("object", associativeArray);
+
+            // need to use JSON to store it
+            localStorage.setItem("object", JSON.stringify(associativeArray));
          }
 
          function loadObject() {
-            associativeArray = localStorage.getItem("object");
+            associativeArray = JSON.parse(localStorage.getItem("object"));
             document.getElementById("objectName").innerHTML = associativeArray.name;
             document.getElementById("objectAge").innerHTML = associativeArray.age;
             document.getElementById("objectLoc").innerHTML = associativeArray.loc;
