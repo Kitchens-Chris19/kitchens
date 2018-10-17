@@ -85,7 +85,7 @@
 
          function loadArray() {
             array = JSON.parse(localStorage.getItem("array"));
-            var arrayString;
+            var arrayString = "";
             for(let item of array)
                arrayString += item + " ";
             document.getElementById("array").innerHTML = arrayString;
