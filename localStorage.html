@@ -70,6 +70,28 @@
          }
       </script>
 
+      <!-- Same as above with an array -->
+      <p id="array">ArrayData</p>
+      <button type="button" id="saveArray" onclick = saveArray()>Save Array</button>
+      <button type="button" id="loadArray" onclick = loadArray()>Load Array</button>
+
+      <script>
+         var array;
+
+         function saveArray() {
+            array = [0, 1, 2, 3, 4, 5];
+            localStorage.setItem("array", JSON.stringify(array));
+         }
+
+         function loadArray() {
+            array = JSON.parse(localStorage.getItem("array"));
+            var arrayString;
+            for(let item of array)
+               arrayString += item + " ";
+            document.getElementById("array").innerHTML = arrayString;
+         }
+
+      </script>
       <br><br><br>
       <!-- localStorage.clear() is used to clear the localStorage manually -->
       <button type="button" id="clear" onclick = localStorage.clear()>Clear</button>
