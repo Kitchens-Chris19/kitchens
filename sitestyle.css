@@ -1,8 +1,12 @@
 body {
-   background-color: rgb(51, 51, 192);
+   background-color: rgb(72, 72, 255);
 }
 
 h1 {
    color: white;
    margin-left: 20px;
+}
+
+body {
+   color: white;
 }
