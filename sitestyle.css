@@ -48,6 +48,6 @@ div#cssSkew {
 
 div#cssMatrix {
    /* scale X, skew Y, skew X, scale Y, translate X, translate Y */
-   transform: matrix(0.75, 0.3, -0.3, 0.75, 0, 0);
+   transform: matrix(0.75, -0.3, 0.3, 0.75, 0, 0);
    /* to use rotate, set skew X and skew Y at opposite values */
 }
