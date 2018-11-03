@@ -43,7 +43,7 @@ div#cssScale {
 
 div#cssSkew {
                   /*  X  ,  Y */
-   transform: skew(0.5deg, 0.5deg); /* if second parameter is empty, skews only on X axis */
+   transform: skew(20deg, 20deg); /* if second parameter is empty, skews only on X axis */
 }
 
 div#cssMatrix {
