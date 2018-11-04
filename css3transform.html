@@ -17,9 +17,25 @@
    <div onmouseover="rotateDIV()" id="rotate2D" style="transform: rotate(360deg);">2D rotate</div>
    <br>
    <div onmouseover="rotateYDIV()" id="rotate3D" style="transform: rotateY(360deg);">3D rotate</div>
+   <br>
+   <div onmouseover="flipDiv()" id="flip">Flip this div</div>
 </body>
 
 <script>
+   var f, z, k;
+function flipDiv()
+{
+   f = document.getElementById("flip");
+   z = setInterval("startFlip()",3000);
+}
+function startFlip()
+{
+   if (flipDegree == 20) {flipDegree = -20;}
+   else flipDegree = 20;
+   f.style.transform="rotate(" + flipDegree + "deg)"
+}
+
+
 var x,y,n=0,ny=0,rotINT,rotYINT
 function rotateDIV()
 {
