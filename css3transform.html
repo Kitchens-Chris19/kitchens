@@ -22,16 +22,17 @@
 </body>
 
 <script>
-   var f, z, k, flipDegree=20;
+   var f, flipInt, k, flipDegree=20;
 function flipDiv()
 {
    f = document.getElementById("flip");
-   z = setInterval("startFlip()",1000);
+   clearInterval(flipInt);
+   flipInt = setInterval("startFlip()",1000);
 }
 function startFlip()
 {
-   if (flipDegree == 20) {flipDegree = -20;}
-   else flipDegree = 20;
+   if (flipDegree == 20) {flipDegree = -20; f.style.color = green;}
+   else {flipDegree = 20; f.style.color = yellow;}
    f.style.transform="rotate(" + flipDegree + "deg)"
 }
 
