@@ -5,9 +5,9 @@
 </head>
 <body>
    <h2>CSS3 Transformations</h2>
-   <button onmouseover="scale()" id="buttonScale">Info</button>
-   <button onmouseover="scale()" id="buttonScale">Transform</button>
-   <button onmouseover="scale()" id="buttonScale">Schedule</button>
+   <button id="buttonScale">Info</button>
+   <button id="buttonScale">Transform</button>
+   <button id="buttonScale">Schedule</button>
    <div>This is just a standard div</div>
    <div id="cssRotate">This is a div which rotate() has been used on</div>
    <br>
@@ -27,12 +27,6 @@
 </body>
 
 <script>
-var scale = document.getElementById("buttonScale");
-function scale() 
-{
-   scale.style.transform="scale(1.5)";
-}
-
 
 var t = document.getElementById("translateDiv");
 function translateTheDiv()

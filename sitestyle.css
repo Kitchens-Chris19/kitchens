@@ -30,6 +30,11 @@ button {
    height: 30px;
 }
 
+button:hover {
+   transform: scale(0.5);
+   background-color: grey;
+}
+
 div {
    width: 300px;
    height: 100px;
