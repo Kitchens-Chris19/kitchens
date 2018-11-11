@@ -31,8 +31,8 @@ button {
 }
 
 button:hover {
-   transform: scale(0.5);
-   background-color: grey;
+   transform: scale(0.75);
+   background-color: blue;
 }
 
 div {
