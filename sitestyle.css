@@ -62,11 +62,12 @@ div#cssMatrix {
    /* to use rotate, set skew X and skew Y at opposite values */
 }
 
-.navbar {
+.navbar, .navbar div {
    overflow: hidden;
    background-color: #333;
    font-family: Arial, Helvetica, sans-serif;
    width: 100%;
+   height: auto;
 }
 
 .navbar a {
