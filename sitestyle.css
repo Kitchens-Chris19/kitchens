@@ -133,7 +133,7 @@ div#cssMatrix {
 }
 
 .dropdown-content a:hover {
-   background-color: #ddd;
+   background-color: rgb(255, 0, 0);
 }
 
 .dropdown:hover .dropdown-content{
