@@ -96,7 +96,8 @@ div#cssMatrix {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-   background-color: red;
+   background-color: yellowgreen;
+   color:black;
 }
 
 .dropdown {
