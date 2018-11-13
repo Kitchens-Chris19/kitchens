@@ -77,6 +77,12 @@ div#cssMatrix {
    width: auto;
 }
 
+.navbar button {
+   width: auto;
+   height: auto;
+   border: none;
+}
+
 .navbar a {
    float: left;
    font-size: 14px;
