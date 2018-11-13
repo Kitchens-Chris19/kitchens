@@ -77,10 +77,12 @@ div#cssMatrix {
    width: auto;
 }
 
-.navbar button {
+.navbar button, .navbar button:hover {
    width: auto;
    height: auto;
    border: none;
+   transform: none;
+   background-color: inherit;
 }
 
 .navbar a {
