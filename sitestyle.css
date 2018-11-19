@@ -45,6 +45,11 @@ li a{
    transition: width 2s, color 2s, background-color 2s, text-align 2s;
 }
 
+li a.active {
+   background-color: #4CAF50;
+   color: white;
+}
+
 li a:hover {
    width: 200px;
    color: white;
