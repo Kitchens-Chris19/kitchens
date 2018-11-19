@@ -55,6 +55,11 @@
             animation-name: slidein;
         }
 
+        #moveR {
+            animation-duration: 2s;
+            animation-name: moveRight;
+        }
+
         @keyframes slidein {
             from {
                 margin-left: 100%;
@@ -68,15 +73,14 @@
         }
 
         @keyframes moveRight {
-            from {left: 0px;}
-            to {left: 50px;}
+            from {translate: 0px;}
+            to {translate: 50px;}
         }
     </style>
+
     <script>
         function moveItem() {
-            var item = document.getElementById("moveIt");
-            item.style.animationName = "moveRight";
-            item.style.animationDuration = "2s";
+            document.getElementById("moveIt").className = "moveR";
         }
 
         function myMove() {
