@@ -1,80 +1,98 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link rel="stylesheet" type="text/css" href="sitestyle.css">
-<div class="navbar">
-   <a href="index.html">Home</a>
-   <a href="ajax.html">AJAX</a>
-   <a href="dom.html">DOM</a>
-   <a href="htmltags.html">HTML Tags</a>
-   <a href="localStorage.html">Local Storage</a>
-   <div class="dropdown">
-      <button class="dropbtn">CSS3
-         <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-         <a href="css3animate.html">CSS3 Animations</a>
-         <a href="css3transform.html">CSS3 Transforms</a>
-         <a href="css3transition.html">CSS3 Transitions</a>
-         <a href="cssjs.html">CSS3 with JS</a>
-         <a href="css3all.html">CSS3 All Combined</a>
-      </div>
-   </div>
-   <div class="dropdown">
-      <button class="dropbtn">JavaScript
-         <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-         <a href="jsArrays.html">Arrays</a>
-         <a href="jsobj.html">Objects</a>
-         <a href="json.html">JSON</a>
-         <a href="jsevents.html">JS Events</a>
-      </div>
-   </div>
-</div>
+    <link rel="stylesheet" type="text/css" href="sitestyle.css">
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="ajax.html">AJAX</a>
+        <a href="dom.html">DOM</a>
+        <a href="htmltags.html">HTML Tags</a>
+        <a href="localStorage.html">Local Storage</a>
+        <div class="dropdown">
+            <button class="dropbtn">CSS3
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="css3animate.html">CSS3 Animations</a>
+                <a href="css3transform.html">CSS3 Transforms</a>
+                <a href="css3transition.html">CSS3 Transitions</a>
+                <a href="cssjs.html">CSS3 with JS</a>
+                <a href="css3all.html">CSS3 All Combined</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">JavaScript
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="jsArrays.html">Arrays</a>
+                <a href="jsobj.html">Objects</a>
+                <a href="json.html">JSON</a>
+                <a href="jsevents.html">JS Events</a>
+            </div>
+        </div>
+    </div>
 </head>
 
 <body>
-   <h2 id="enter">CSS3 Animations</h2>
-   <p id="enter">Place your mouse over the box to see it move!</p>
-   <div id ="cssAnimateContainer">
-      <div id ="cssAnimation" onmouseover="myMove()"></div>
-   </div>
+    <h2 id="enter">CSS3 Animations</h2>
+    <p id="enter">Click the items to add them to your cart</p>
+    <p id="enter">Items Cart</p>
+    <p id="moveIt" onclick="moveItem()">Milk</p>
+    <p id="moveIt" onclick="moveItem()">Eggs</p>
+    <p id="moveIt" onclick="moveItem()">Bread</p>
+    <p id="moveIt" onclick="moveItem()">Meat</p>
 
-   <style>
-   #enter {
-       animation-duration: 3s;
-       animation-name: slidein;
-   }
+    <p id="enter">Place your mouse over the box to see it move!</p>
+    <div id="cssAnimateContainer">
+        <div id="cssAnimation" onmouseover="myMove()"></div>
+    </div>
 
-   @keyframes slidein {
-       from {
-           margin-left:100%;
-           width: 300%;
-       }
+    <style>
+        #enter {
+            animation-duration: 3s;
+            animation-name: slidein;
+        }
 
-       to {
-           margin-left: 0%;
-           width: 100%;
-       }
-   }
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
 
-   </style>
-   <script>
-   function myMove() {
-      var elem = document.getElementById("cssAnimation"); 
-      var pos = 0;
-      var id = setInterval(frame, 10);
-      function frame() {
-         if (pos == 350) {
-            clearInterval(id);
-         } else {
-            pos++; 
-            elem.style.top = pos + 'px'; 
-            elem.style.left = pos + 'px'; 
-         }
-      }
-   }
-   </script>
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+    </style>
+    <script>
+        function moveItem() {
+            var item = document.getElementById("moveIt");
+            var pixl = 50;
+            var id = setInterval(frame, 10);
+            function frame() {
+                for (let index = 0; index < pixl; index++) {
+                    item.style.left = index + 'px';
+                }
+            }
+        }
+        function myMove() {
+            var elem = document.getElementById("cssAnimation");
+            var pos = 0;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (pos == 350) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.top = pos + 'px';
+                    elem.style.left = pos + 'px';
+                }
+            }
+        }
+    </script>
 </body>
+
 </html>
