@@ -37,6 +37,14 @@
 <body>
    <h2>JavaScript Events</h2>
    <div id="colNeg" onclick="changeColNeg()" onchange="changeAlrt()">Click this sentence to go dark!</div>
+   <br>
+   <div onmouseover="rotateDIV()" id="rotate2D" style="transform: rotate(360deg);">2D rotate</div>
+   <br>
+   <div onmouseover="rotateYDIV()" id="rotate3D" style="transform: rotateY(360deg);">3D rotate</div>
+   <br>
+   <div onmouseover="flipDiv()" id="flip" style="transform:rotate(20deg);">Rotate this div</div>
+   <br>
+   <div onmouseover="translateTheDiv()" id="translateDiv">Translate this div by mousing over it</div>
 </body>
 
 <script>
@@ -48,6 +56,64 @@
 
    function changeAlrt() {
       document.getElementById('colNeg').innerHTML = "You went dark!";
+   }
+   var t = document.getElementById("translateDiv");
+   function translateTheDiv()
+   {
+      t.style.transform="translate(250px,0px)"
+   }
+
+      var f, flipInt, flipDegree=20;
+   function flipDiv()
+   {
+      f = document.getElementById("flip");
+      clearInterval(flipInt);
+      flipInt = setInterval("startFlip()",1000);
+   }
+   function startFlip()
+   {
+      if (flipDegree == 20) {flipDegree = -20; f.style.backgroundColor="red"}
+      else {flipDegree = 20; f.style.backgroundColor="yellow"}
+      f.style.transform="rotate(" + flipDegree + "deg)"
+   }
+   var x,y,n=0,ny=0,rotINT,rotYINT
+   function rotateDIV()
+   {
+      x=document.getElementById("rotate2D")
+      clearInterval(rotINT)
+      rotINT=setInterval("startRotate()",10) // this will continue until clearInterval() is called
+   }
+   function rotateYDIV()
+   {
+      y=document.getElementById("rotate3D")
+      clearInterval(rotYINT)
+      rotYINT=setInterval("startYRotate()",10) // this will continue until clearInterval() is called
+   }
+   function startRotate()
+   {
+      n=n+1
+      x.style.transform="rotate(" + n + "deg)"
+      x.style.webkitTransform="rotate(" + n + "deg)"
+      x.style.OTransform="rotate(" + n + "deg)"
+      x.style.MozTransform="rotate(" + n + "deg)"
+      if (n==180 || n==360)
+      {
+         clearInterval(rotINT)
+         if (n==360){n=0}
+      }
+   }
+   function startYRotate()
+   {
+      ny=ny+1
+      y.style.transform="rotateY(" + ny + "deg)"
+      y.style.webkitTransform="rotateY(" + ny + "deg)"
+      y.style.OTransform="rotateY(" + ny + "deg)"
+      y.style.MozTransform="rotateY(" + ny + "deg)"
+      if (ny==180 || ny>=360)
+      {
+         clearInterval(rotYINT)
+         if (ny>=360){ny=0}
+      }
    }
 </script>
 </html>
