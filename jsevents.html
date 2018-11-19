@@ -38,6 +38,8 @@
    <h2>JavaScript Events</h2>
    <div id="colNeg" onclick="changeColNeg()">Click this sentence to go dark!</div>
    <br>
+   <div id="touch" ontouchstart="touchDevice()">Click this if you're using a touch device</div>
+   <br>
    <div onmouseover="rotateDIV()" id="rotate2D" style="transform: rotate(360deg);">2D rotate</div>
    <br>
    <div onmouseover="rotateYDIV()" id="rotate3D" style="transform: rotateY(360deg);">3D rotate</div>
@@ -46,13 +48,16 @@
 </body>
 
 <script>
+   function touchDevice() {
+      document.getElementById("touch").innerHTML = "You're on a touch device!";
+   }
    function changeColNeg() {
       var obj = document.getElementById('colNeg');
       obj.style.backgroundColor = 'black';
       obj.style.color = 'white';
       document.getElementById('colNeg').innerHTML = "You went dark!";
    }
-   
+
    var f, flipInt, flipDegree=20;
    function flipDiv()
    {
