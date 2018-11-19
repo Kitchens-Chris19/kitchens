@@ -1,0 +1,22 @@
+<CATALOG>
+   <GPU>
+      <NAME>NVIDIA RTX 2070</NAME>
+      <VRAM>8GB</VRAM>
+      <PRICE>$499.99</PRICE>
+   </GPU>
+   <GPU>
+      <NAME>NVIDIA GTX 1070</NAME>
+      <VRAM>8GB</VRAM>
+      <PRICE>$399.99</PRICE>
+   </GPU>
+   <GPU>
+      <NAME>Radeon RX 580</NAME>
+      <VRAM>8GB</VRAM>
+      <PRICE>$342.26</PRICE>
+   </GPU>
+   <GPU>
+      <NAME>Radeon RX 570</NAME>
+      <VRAM>4GB</VRAM>
+      <PRICE>$159.99</PRICE>
+   </GPU>
+</CATALOG>

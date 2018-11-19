@@ -37,13 +37,19 @@
 <p id="desc" style="position: absolute; right: 300px; width: 300px; height: 100px; border: 1px solid black;
 background-color: yellowgreen;">
    AJAX is used to access text in a file within the server used for this site. The request changes the text
-   within the div element, which gets rid of the button altogether.
+   within the div element, which gets rid of the button altogether. The first example loads text from a text file.
+   The second loads from an XML file.
 </p>
 
 <div id="demo">
    <p>Use AJAX to change this text</p>
    <button type="button" onclick="loadDoc()">Change Content</button>
 </div>
+
+<h2>Gaming Rigs</h2>
+<p>Click on a GPU to see the price</p>
+<p id="showGPU"></p>
+<table id="gpuTable"></table>
 
 <script>
 function loadDoc() {
@@ -55,6 +61,33 @@ function loadDoc() {
   };
   xhttp.open("GET", "ajax_test.txt", true);
   xhttp.send();
+}
+
+// for the table of GPUs
+var x,xmlhttp,xmlDoc
+xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET", "gpu_catalog.xml", false);
+xmlhttp.send();
+xmlDoc = xmlhttp.responseXML; 
+x = xmlDoc.getElementsByTagName("GPU");
+table="<tr><th>GPU</th><th>VRAM</th></tr>";
+for (i = 0; i <x.length; i++) { 
+  table += "<tr onclick='displayGPU(" + i + ")'><td>";
+  table += x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue;
+  table += "</td><td>";
+  table +=  x[i].getElementsByTagName("VRAM")[0].childNodes[0].nodeValue;
+  table += "</td></tr>";
+}
+document.getElementById("demo").innerHTML = table;
+
+function displayGPU(i) {
+  document.getElementById("showGPU").innerHTML =
+  "Name: " +
+  x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
+  "<br>VRAM: " +
+  x[i].getElementsByTagName("VRAM")[0].childNodes[0].nodeValue +
+  "<br>Price: " + 
+  x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue;
 }
 </script>
 </body>
