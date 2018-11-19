@@ -34,5 +34,49 @@
 
 <body>
    <h2>JSON</h2>
+   <p id="name">ObjectName</p>
+   <p id="age">ObjectAge</p>
+   <p id="location">ObjectLoc</p>
+
+   <button type="button" id="getData" onclick= getData()>Input info</button>
+   <button type="button" id="saveObject" onclick= saveAssocArray()>Save Object</button>
+   <button type="button" id="loadObject" onclick= loadObject()>Load Object</button>
+
+   <p id="objectName">Your Object's Name</p>
+   <p id="objectAge">Your Object's Age</p>
+   <p id="objectLoc">Your Object's Location</p>
+
+   <script>
+      var myObj; 
+      var name, age, loc;
+
+      // prompts user for data and shows it on screen
+      function getData() {
+         name = prompt("Please enter your name", "No name entered");
+         age = prompt("Please enter your age.", "No age entered");
+         loc = prompt("Please enter your location", "No location entered");
+
+         document.getElementById("name").innerHTML = name;
+         document.getElementById("age").innerHTML = age;
+         document.getElementById("location").innerHTML = loc;
+      }
+
+      function saveAssocArray() {
+         myObj = {name: "name", age: "age", loc: "location"}; // established here because localStorage.clear() gets rid of this information
+         myObj.name = document.getElementById("name").innerHTML;
+         myObj.age = document.getElementById("age").innerHTML;
+         myObj.loc = document.getElementById("location").innerHTML;
+
+         // need to use JSON to store it
+         localStorage.setItem("object", JSON.stringify(myObj)); // stringify converts to string for storage
+      }
+
+      function loadObject() {
+         myObj = JSON.parse(localStorage.getItem("object")); // parse gets data from string
+         document.getElementById("objectName").innerHTML = myObj.name;
+         document.getElementById("objectAge").innerHTML = myObj.age;
+         document.getElementById("objectLoc").innerHTML = myObj.loc;
+      }
+   </script>
 </body>
 </html>
