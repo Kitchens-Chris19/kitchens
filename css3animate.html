@@ -39,10 +39,10 @@
     <h2>CSS3 Animations</h2>
     <p id="enter">Click the items to add them to your cart</p>
     <p>Items &emsp;&emsp;&emsp; Cart</p>
-    <p id="moveIt" onclick="moveItem()">Milk</p>
-    <p id="moveIt" onclick="moveItem()">Eggs</p>
-    <p id="moveIt" onclick="moveItem()">Bread</p>
-    <p id="moveIt" onclick="moveItem()">Meat</p>
+    <p id="moveIt" onclick="moveItem(this)">Milk</p>
+    <p id="moveIt" onclick="moveItem(this)">Eggs</p>
+    <p id="moveIt" onclick="moveItem(this)">Bread</p>
+    <p id="moveIt" onclick="moveItem(this)">Meat</p>
 
     <p id="enter">Place your mouse over the box to see it move!</p>
     <div id="cssAnimateContainer">
@@ -80,8 +80,8 @@
     </style>
 
     <script>
-        function moveItem() {
-            document.getElementById("moveIt").id = "moveR";
+        function moveItem(element) {
+            this.id = "moveR";
         }
 
         function myMove() {
