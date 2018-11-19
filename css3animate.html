@@ -36,5 +36,25 @@
 
 <body>
    <h2>CSS3 Animations</h2>
+   <div id ="cssAnimateContainer">
+      <div id ="cssAnimation" onmouseover="myMove()">My animation will go here</div>
+   </div>
+
+   <script>
+   function myMove() {
+      var elem = document.getElementById("cssAnimation"); 
+      var pos = 0;
+      var id = setInterval(frame, 10);
+      function frame() {
+         if (pos == 350) {
+            clearInterval(id);
+         } else {
+            pos++; 
+            elem.style.top = pos + 'px'; 
+            elem.style.left = pos + 'px'; 
+         }
+      }
+   }
+   </script>
 </body>
 </html>
