@@ -43,8 +43,6 @@
    <div onmouseover="rotateYDIV()" id="rotate3D" style="transform: rotateY(360deg);">3D rotate</div>
    <br>
    <div onmouseover="flipDiv()" id="flip" style="transform:rotate(20deg);">Rotate this div</div>
-   <br>
-   <div onmouseover="translateTheDiv()" id="translateDiv">Translate this div by mousing over it</div>
 </body>
 
 <script>
@@ -54,14 +52,8 @@
       obj.style.color = 'white';
       document.getElementById('colNeg').innerHTML = "You went dark!";
    }
-
-   var t = document.getElementById("translateDiv");
-   function translateTheDiv()
-   {
-      t.style.transform="translate(250px,0px)"
-   }
-
-      var f, flipInt, flipDegree=20;
+   
+   var f, flipInt, flipDegree=20;
    function flipDiv()
    {
       f = document.getElementById("flip");
