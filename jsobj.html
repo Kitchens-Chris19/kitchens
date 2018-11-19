@@ -33,6 +33,59 @@
 </head>
 
 <body>
-   <h2>JavaScript Objects</h2>
+<h2>JavaScript Objects</h2>
+<h3>Motorcycle 1 Info:</h3>
+<p id="make">Make</p>
+<p id="model">Model</p>
+<p id="hp">Horsepower</p>
+<p id="topSpeed">Top Speed</p>
+<button type="button" id="getData" onclick=getData()>Input Data</button>
+
+<h3>Motorcycle 2 Info:</h3>
+<p id="make2">Make</p>
+<p id="model2">Model</p>
+<p id="hp2">Horsepower</p>
+<p id="topSpeed2">Top Speed</p>
+<button type="button" id="getData2" onclick=getData2()>Input Data</button>
+
+<script>
+
+   function Motorcycle(make, model, hp, topSpeed) {
+      this.make = make;
+      this.model = model;
+      this.hp = hp;
+      this.topSpeed = topSpeed;
+   }
+
+   var make, model, hp, topSpeed, motorcycle;
+   function getData() {
+      make = prompt("Please enter your desired make", "No make entered");
+      model = prompt("Please enter your desired model.", "No model entered");
+      hp = prompt("Please enter your desired horsepower", "No horsepower entered");
+      topSpeed = prompt("Please enter the desired top speed", "No top speed entered");
+
+      motorcycle = new Motorcycle(make, model, hp, topSpeed); // creates the object
+
+      document.getElementById("make").innerHTML = motorcycle.make;
+      document.getElementById("model").innerHTML = motorcycle.model;
+      document.getElementById("hp").innerHTML = motorcycle.hp;
+      document.getElementById("topSpeed").innerHTML = motorcycle.topSpeed;
+   }
+   function getData2() {
+      make = prompt("Please enter your desired make", "No make entered");
+      model = prompt("Please enter your desired model.", "No model entered");
+      hp = prompt("Please enter your desired horsepower", "No horsepower entered");
+      topSpeed = prompt("Please enter the desired top speed", "No top speed entered");
+
+      motorcycle = new Motorcycle(make, model, hp, topSpeed); // creates the object
+
+      document.getElementById("make2").innerHTML = motorcycle.make;
+      document.getElementById("model2").innerHTML = motorcycle.model;
+      document.getElementById("hp2").innerHTML = motorcycle.hp;
+      document.getElementById("topSpeed2").innerHTML = motorcycle.topSpeed;
+   }
+
+</script>
+
 </body>
 </html>
