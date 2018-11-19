@@ -36,11 +36,30 @@
 
 <body>
    <h2>CSS3 Animations</h2>
-   <p>Place your mouse over the box to see it move!</p>
+   <p id="enter">Place your mouse over the box to see it move!</p>
    <div id ="cssAnimateContainer">
       <div id ="cssAnimation" onmouseover="myMove()"></div>
    </div>
 
+   <style>
+   #enter {
+       animation-duration: 3s;
+       animation-name: slidein;
+   }
+
+   @keyframes slidein {
+       from {
+           margin-left:100%;
+           width: 300%;
+       }
+
+       to {
+           margin-left: 0%;
+           width: 300%;
+       }
+   }
+
+   </style>
    <script>
    function myMove() {
       var elem = document.getElementById("cssAnimation"); 
