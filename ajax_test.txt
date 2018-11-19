@@ -1,1 +1,1 @@
-This displays text.
+Thanks for clicking the button!
