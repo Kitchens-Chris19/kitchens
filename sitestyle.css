@@ -31,9 +31,7 @@ ul {
    padding: 0;
    width: 150px;
    background-color: #f1f1f1;
-   position: fixed;
    height: 100%;
-   overflow:auto;
 }
 
 li a{
@@ -41,7 +39,7 @@ li a{
    color: #000;
    padding: 8px 16px;
    text-decoration: none;
-   text-align: right;
+   text-align: left;
    transition: width 2s, color 2s, background-color 2s, text-align 2s;
 }
 
@@ -51,10 +49,11 @@ li a.active {
 }
 
 li a:hover {
+   text-align: right;
    width: 200px;
    color: white;
    background-color: #555;
-   transform: rotate(10deg);
+   transform: rotate(5deg);
 }
 
 button {
