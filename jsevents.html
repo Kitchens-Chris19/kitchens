@@ -36,5 +36,18 @@
 
 <body>
    <h2>JavaScript Events</h2>
+   <div id="colorChange" onclick="changeColNeg()" onchange="changeAlrt()">Click this sentence to go dark!</p>
 </body>
+
+<script>
+   function changeColNeg() {
+      var obj = document.getElementById('colNeg');
+      obj.style.backgroundColor = 'black';
+      obj.style.color = 'white';
+   }
+
+   function changeAlrt() {
+      this.innerHTML = document.getElementById('colNeg').innerHTML;
+   }
+</script>
 </html>
