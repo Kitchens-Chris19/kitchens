@@ -66,18 +66,19 @@
                 width: 100%;
             }
         }
+
+        @keyframes moveRight {
+            0% {left: 0px;}
+            100% {left: 50px;}
+        }
     </style>
     <script>
         function moveItem() {
             var item = document.getElementById("moveIt");
-            var pixl = 50;
-            var id = setInterval(frame, 10);
-            function frame() {
-                for (let index = 0; index < pixl; index++) {
-                    item.style.right = index + 'px';
-                }
-            }
+            item.style.animationName = "moveRight";
+            item.style.animationDuration = "2s";
         }
+
         function myMove() {
             var elem = document.getElementById("cssAnimation");
             var pos = 0;
