@@ -40,7 +40,7 @@ li a{
    padding: 8px 16px;
    text-decoration: none;
    text-align: left;
-   transition: color 1s, background-color 1s, text-align 2s transform 1s;
+   transition: color 2s, background-color 2s, text-align 2s transform 2s;
 }
 
 li a.active {
