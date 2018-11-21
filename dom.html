@@ -57,14 +57,14 @@ background-color: yellowgreen; color:black;">
 
    <script>
       function addPara() {
-         // create new paragraph
+         // create new list item
          var newLI = document.createElement("LI");
          // give it content
          var newText = document.createTextNode(document.getElementById('newNote').value);
-         // add the text node to the newly created p
+         // add the text node to the newly created list item
          newLI.appendChild(newText);
 
-         // add the newly created p into DOM
+         // add the newly created list item into DOM
          var currentList = document.getElementById("myList");
          currentList.insertBefore(newLI, currentList.childNodes[0]);
          document.getElementById('newNote').value = '';
