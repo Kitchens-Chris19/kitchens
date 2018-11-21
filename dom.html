@@ -45,11 +45,12 @@
    </div>
    <br>
    <h4>To do:</h4>
+   <button onclick="removeItem()">Remove item</button>
    <ul id="myList">
       <li></li>
    </ul>
    
-   <button onclick="removeItem()">Remove item</button>
+   
    
 
 
@@ -73,6 +74,23 @@
          notes.removeChild(notes.childNodes[0]);
       }
    </script>
+
+   <style>
+      div {
+         height: 40px;
+         text-align: center;
+         padding-top: 10px;
+      }
+      h4 {
+         color:white;
+         font-size: large;
+      }
+      #myList {
+         padding-left: 10px;
+         font-family: fantasy;
+      }
+
+   </style>
 </body>
 
 </html>
