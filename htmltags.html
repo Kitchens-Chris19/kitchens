@@ -46,11 +46,21 @@
       var canvas = document.getElementById("canv");
       var ctx = canvas.getContext("2d");
       ctx.fillStyle = "#FF0000";
-      ctx.fillRect(0,0,150,75);
+      ctx.fillRect(20,20,150,75);
+   }
+   function drawCirc() {
+      var canvas = document.getElementById("canv");
+      var ctx = canvas.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(95,50,40,0,2*Math.PI);
+      ctx.stroke();
    }
    </script>
 
    <style>
+      h4 {
+         color: white;
+      }
       #canv {
          border: 1px solid #c3c3c3;
       }
