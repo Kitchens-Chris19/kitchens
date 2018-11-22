@@ -37,6 +37,7 @@
 <body>
    <h2>HTML Tags</h2>
    <h4>Canvas</h4>
+   <p>Draw a rectangle and a circle to create the secret image!</p>
    <canvas id="canv" width="300" height="200"></canvas>
    <button onclick="drawCirc()">Draw a Circle</button>
    <button onclick="drawRec()">Draw a Rectangle</button>
@@ -45,14 +46,16 @@
    function drawRec() {
       var canvas = document.getElementById("canv");
       var ctx = canvas.getContext("2d");
-      ctx.fillStyle = "#FF0000";
-      ctx.fillRect(20,20,150,75);
+      ctx.fillStyle = "white";
+      ctx.fillRect(20,20,299,199);
    }
    function drawCirc() {
       var canvas = document.getElementById("canv");
       var ctx = canvas.getContext("2d");
       ctx.beginPath();
       ctx.arc(95,50,40,0,2*Math.PI);
+      ctx.fillStyle="red";
+      ctx.fill();
       ctx.stroke();
    }
    </script>
