@@ -36,5 +36,25 @@
 
 <body>
    <h2>HTML Tags</h2>
+   <h4>Canvas</h4>
+   <canvas id="canv" width="300" height="200"></canvas>
+   <button onclick="drawCirc()">Draw a Circle</button>
+   <button onclick="drawRec()">Draw a Rectangle</button>
+
+   <script>
+   function drawRec() {
+      var canvas = document.getElementById("canv");
+      var ctx = canvas.getContext("2d");
+      ctx.fillStyle = "#FF0000";
+      ctx.fillRect(0,0,150,75);
+   }
+   </script>
+
+   <style>
+      #canv {
+         border: 1px solid #c3c3c3;
+      }
+   </style>
+
 </body>
 </html>
