@@ -159,7 +159,7 @@
          var textNote = document.createTextNode(text);
          var newNote = document.createElement("p");
          newNote.appendChild(textNote);
-         newNote.setAttribute("class", "enter");
+         newNote.setAttribute("class", "enter"); // gives it this class to trigger animation on creation
          var element = document.getElementById("contDiv");
          element.appendChild(newNote);
       }
