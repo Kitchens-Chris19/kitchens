@@ -67,7 +67,7 @@
 </head>
 
 <body style="background-color: darkslategrey; margin: 2px;">
-   <h2>CSS3 Animations, Transforms, & Transitions</h2>
+   <h2>CSS3 Animations, Transforms, & Transitions with JavaScript</h2>
    <ul id="navSide">
       <li><button class="liBtn" onclick="clrChange()">Color Change</button></li>
       <li><button class="liBtn" onclick="addNote()">Add notes</button></li>
@@ -76,7 +76,7 @@
    </ul>
 
    <div id="contDiv">
-      <p>Test Paragraph</p>
+      <p id="p1">Test Paragraph</p>
 
    </div>
 
@@ -87,7 +87,8 @@
       function clrChange() {
          var div1 = document.getElementById("contDiv");
          div1.style.backgroundColor = "white";
-         div1.style.color = "black";
+         var p1 = document.getElementById("p1");
+         p1.style.color = "black";
       }
 
       function addNote() {
