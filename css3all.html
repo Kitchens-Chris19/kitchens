@@ -34,18 +34,35 @@
       </div>
    </div>
    <style>
+      @keyframes slidein {
+         from {
+            margin-left: 100%;
+            width: 300%;
+         }
+
+         to {
+            margin-left: 0%;
+            width: 100%;
+         }
+      }
+
       #contDiv {
          margin-left: 14%;
          margin-right: 10px;
          background-color: #333;
          width: 85%;
-         height:auto;
+         height: auto;
       }
 
       #navSide {
          position: fixed;
          width: 13%;
          max-height: fit-content;
+      }
+
+      .enter {
+         animation-duration: 2s;
+         animation-name: slidein;
       }
 
       .liBtn {
@@ -74,10 +91,10 @@
          border-radius: 6px;
          padding: 5px 0;
          position: absolute;
-         z-index:1;
+         z-index: 1;
          top: -14px;
          left: 110%;
-         
+
          opacity: 0;
          transition: opacity 1s, transform 1s;
       }
@@ -105,11 +122,10 @@
 <body style="background-color: darkslategrey; margin: 2px;">
    <h2>CSS3 Animations, Transforms, & Transitions with JavaScript</h2>
    <ul id="navSide">
-      <li><button class="liBtn tooltip" onclick="clrChange()">Color Change
-            <span class="tooltiptext">Change the color inside the box!</span></button></li>
       <li><button class="liBtn tooltip" onclick="addNote()">Add notes
             <span class="tooltiptext">Add a note to your list!</span></button></li>
-      <li><button class="liBtn" onclick="removeNote()">Remove notes</button></li>
+      <li><button class="liBtn tooltip" onclick="clrChange()">Color Change
+            <span class="tooltiptext">Change the color inside the box!</span></button></li>
    </ul>
 
    <div id="contDiv">
@@ -126,7 +142,7 @@
          div1.style.backgroundColor = "white";
          var x = document.querySelectorAll("p"); // select all paragraph and go through each
          for (let i = 0; i < x.length; i++) {
-            x[i].style.color = "black";  
+            x[i].style.color = "black";
          }
       }
 
@@ -135,7 +151,7 @@
          var textNote = document.createTextNode(text);
          var newNote = document.createElement("p");
          newNote.appendChild(textNote);
-
+         newNote.setAttribute("class", "enter");
          var element = document.getElementById("contDiv");
          element.appendChild(newNote);
       }
