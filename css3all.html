@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link rel="stylesheet" type="text/css" href="sitestyle.css">
-<div class="navbar">
-   <a href="index.html">Home</a>
-   <a href="ajax.html">AJAX</a>
-   <a href="dom.html">DOM</a>
-   <a href="htmltags.html">HTML Tags</a>
-   <a href="localStorage.html">Local Storage</a>
-   <div class="dropdown">
-      <button class="dropbtn">CSS3
-         <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-         <a href="css3animate.html">CSS3 Animations</a>
-         <a href="css3transform.html">CSS3 Transforms</a>
-         <a href="css3transition.html">CSS3 Transitions</a>
-         <a href="cssjs.html">CSS3 with JS</a>
-         <a href="css3all.html">CSS3 All Combined</a>
+   <link rel="stylesheet" type="text/css" href="sitestyle.css">
+   <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="ajax.html">AJAX</a>
+      <a href="dom.html">DOM</a>
+      <a href="htmltags.html">HTML Tags</a>
+      <a href="localStorage.html">Local Storage</a>
+      <div class="dropdown">
+         <button class="dropbtn">CSS3
+            <i class="fa fa-caret-down"></i>
+         </button>
+         <div class="dropdown-content">
+            <a href="css3animate.html">CSS3 Animations</a>
+            <a href="css3transform.html">CSS3 Transforms</a>
+            <a href="css3transition.html">CSS3 Transitions</a>
+            <a href="cssjs.html">CSS3 with JS</a>
+            <a href="css3all.html">CSS3 All Combined</a>
+         </div>
+      </div>
+      <div class="dropdown">
+         <button class="dropbtn">JavaScript
+            <i class="fa fa-caret-down"></i>
+         </button>
+         <div class="dropdown-content">
+            <a href="jsArrays.html">Arrays</a>
+            <a href="jsobj.html">Objects</a>
+            <a href="json.html">JSON</a>
+            <a href="jsevents.html">JS Events</a>
+         </div>
       </div>
    </div>
-   <div class="dropdown">
-      <button class="dropbtn">JavaScript
-         <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-         <a href="jsArrays.html">Arrays</a>
-         <a href="jsobj.html">Objects</a>
-         <a href="json.html">JSON</a>
-         <a href="jsevents.html">JS Events</a>
-      </div>
-   </div>
-</div>
 </head>
 
 <body style="background-color: darkslategrey; margin: 2px;">
    <h2>CSS3 Animations, Transforms, & Transitions</h2>
    <ul id="navSide">
-      <li><button onclick="doSomething()">Button 1</button></li>
+      <li><button class="liBtn" onclick="doSomething()">Button 1</button></li>
    </ul>
 
    <div id="allDiv">
@@ -49,7 +50,9 @@
 
 
    <script>
-   
+
+
+
    </script>
 
    <style>
@@ -59,11 +62,29 @@
          background-color: #333;
          width: 85%;
       }
+
       #navSide {
          position: fixed;
          width: 13%;
          max-height: fit-content;
       }
+
+      .liBtn {
+         display: block;
+         color: #000;
+         padding: 8px 16px;
+         text-decoration: none;
+         text-align: left;
+         transition: color 2s, background-color 2s, text-align 2s, transform 2s;
+      }
+
+      .liBtn:hover {
+         text-align: right;
+         color: white;
+         background-color: #555;
+         transform: rotate(5deg);
+      }
    </style>
 </body>
+
 </html>
