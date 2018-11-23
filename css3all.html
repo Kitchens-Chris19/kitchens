@@ -128,7 +128,8 @@
       }
 
       function addNote() {
-         var textNote = prompt("Enter your to-do item:", "No note enterd.");
+         var text = prompt("Enter your to-do item:", "No note enterd.");
+         var textNote = document.createTextNode(text);
          var newNote = document.createElement("p");
          newNote.appendChild(textNote);
 
