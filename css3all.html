@@ -128,7 +128,12 @@
       }
 
       function addNote() {
+         var textNote = prompt("Enter your to-do item:", "No note enterd.");
+         var newNote = document.createElement("p");
+         newNote.appendChild(textNote);
 
+         var element = document.getElementById("contDiv");
+         element.appendChild(newNote);
       }
 
       function removeNote() {
