@@ -34,7 +34,7 @@
       </div>
    </div>
    <style>
-      #allDiv {
+      #contDiv {
          margin-left: 14%;
          margin-right: 10px;
          background-color: #333;
@@ -54,7 +54,7 @@
          padding: 8px 16px;
          text-decoration: none;
          text-align: left;
-         transition: color 1.3s, background-color 1.3s, text-align 2s, transform 1.3s;
+         transition: color 1.3s, background-color 1.3s, transform 1.3s;
       }
 
       .liBtn:hover {
@@ -69,10 +69,13 @@
 <body style="background-color: darkslategrey; margin: 2px;">
    <h2>CSS3 Animations, Transforms, & Transitions</h2>
    <ul id="navSide">
-      <li><button class="liBtn" onclick="doSomething()">Button 1</button></li>
+      <li><button class="liBtn" onclick="clrChange()">Color Change</button></li>
+      <li><button class="liBtn" onclick="addNote()">Add notes</button></li>
+      <li><button class="liBtn" onclick="removeNote()">Remove notes</button></li>
+      <li><button class="liBtn" onclick="dance()">Make 'em dance</button></li>
    </ul>
 
-   <div id="allDiv">
+   <div id="contDiv">
       <p>Test Paragraph</p>
 
    </div>
@@ -81,8 +84,23 @@
 
 
    <script>
+      function clrChange() {
+         var div1 = document.getElementById("contDiv");
+         div1.style.backgroundColor = white;
+         div1.style.color = black;
+      }
 
+      function addNote() {
 
+      }
+
+      function removeNote() {
+
+      }
+
+      function dance() {
+
+      }
 
    </script>
 </body>
