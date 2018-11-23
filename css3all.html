@@ -63,13 +63,37 @@
          background-color: #555;
          transform: rotate(5deg);
       }
+
+      .tooltip .tooltiptext {
+         visibility: hidden;
+         width: auto;
+         background-color: grey;
+         color: white;
+         text-align: center;
+         border-radius: 6px;
+         padding: 5px 0;
+         position: absolute;
+         z-index:1;
+         bottom: 100%;
+         left: 50%;
+         margin-left: -60px;
+
+         opacity: 0;
+         transition: opacity 1s;
+      }
+
+      .tooltip:hover .tooltiptext {
+         visibility: visible;
+         opacity: 1;
+      }
    </style>
 </head>
 
 <body style="background-color: darkslategrey; margin: 2px;">
    <h2>CSS3 Animations, Transforms, & Transitions with JavaScript</h2>
    <ul id="navSide">
-      <li><button class="liBtn" onclick="clrChange()">Color Change</button></li>
+      <li><button class="liBtn tooltip" onclick="clrChange()">Color Change
+            <span class="tooltiptext">Change the color inside the box!</span></button></li>
       <li><button class="liBtn" onclick="addNote()">Add notes</button></li>
       <li><button class="liBtn" onclick="removeNote()">Remove notes</button></li>
    </ul>
