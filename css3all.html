@@ -111,8 +111,8 @@
       <li><button class="liBtn" onclick="removeNote()">Remove notes</button></li>
    </ul>
 
-   <div id="contDiv">
-      <p id="p1">To-do:</p>
+   <div id="contDiv" class="chngClr">
+      <p id="p1" class="chngClr">To-do:</p>
 
    </div>
 
@@ -125,12 +125,14 @@
          div1.style.backgroundColor = "white";
          var p1 = document.getElementById("p1");
          p1.style.color = "black";
+         var all = document.querySelectorAll(".chngClr");
       }
 
       function addNote() {
          var text = prompt("Enter your to-do item:", "No note enterd.");
          var textNote = document.createTextNode(text);
          var newNote = document.createElement("p");
+         newNote.setAttribute("class", "chngClr");
          newNote.appendChild(textNote);
 
          var element = document.getElementById("contDiv");
