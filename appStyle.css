@@ -55,8 +55,8 @@ button:hover {
 }
 
 div {
-   width: 300px;
-   height: 100px;
+   width: auto;
+   height: auto;
    background-color: yellowgreen;
    border: 1px solid black
 }

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <style>
+      ul {
+         list-style: none;
+      }
+
+      /* -----------------------------------*/
+      /* ------- START DEMO 1 STYLES -------*/
+      /* -----------------------------------*/
+      div.demo1 {
+         background-color: #000000;
+         padding: 20px;
+         margin: 10px;
+         font-family: times, serif;
+      }
+
+      div.demo1 .myNav li {
+         margin: 0px 0px 10px 0px;
+      }
+
+      div.demo1 .myNav a {
+         color: #606060;
+         text-decoration: none;
+         padding: 0 10px;
+         font-size: 1.2em;
+         text-transform: uppercase;
+      }
+
+      div.demo1 .myNav a:hover {
+         color: #efefef;
+         letter-spacing: .1em;
+         margin-left: 10px;
+         transition: 1s color, 1s letter-spacing, 1s margin-left;
+      }
+
+      div.demo1 .myNav span.extraInfo {
+         opacity: 0;
+         font-style: italic;
+         border-left: 1px solid;
+         padding-left: 5px;
+         color: #fbae5d;
+      }
+
+      div.demo1 .myNav a:hover+span.extraInfo {
+         opacity: 1;
+         transition: 2s opacity;
+      }
+
+      div.demo1 #myContent {
+         color: #808080;
+         padding: 20px;
+         font-size: 1em;
+         font-family: arial, sans-serif;
+      }
+
+      /* -----------------------------------*/
+      /* ------- START DEMO 2 STYLES -------*/
+      /* -----------------------------------*/
+      div.demo2 {
+         background-color: #618685;
+         padding: 20px;
+         margin: 10px;
+         font-family: arial, sans-serif;
+      }
+
+      div.demo2 .myNav {
+         margin: 0 auto;
+         max-width: 550px;
+         height: 70px;
+         border-bottom: 1px solid #80ced6;
+      }
+
+      div.demo2 .myNav ul {
+         margin: 0;
+      }
+
+      div.demo2 .myNav li {
+         float: left;
+         max-width: 150px;
+         margin-right: 16px;
+         text-align: center;
+      }
+
+      div.demo2 .myNav a {
+         color: #80ced6;
+         text-decoration: none;
+         font-size: 1em;
+         padding: 0 10px;
+         text-transform: uppercase;
+      }
+
+      div.demo2 .myNav a:hover {
+         color: #d5f4e6;
+         transition: 1s;
+      }
+
+      div.demo2 .myNav span.extraInfo {
+         opacity: 0.1;
+         padding-top: 0px;
+         font-style: italic;
+         font-size: 0.8em;
+         display: block;
+         position: relative;
+         color: #fefbd8;
+      }
+
+      div.demo2 .myNav a:hover+span.extraInfo {
+         opacity: 1;
+         padding-top: 6px;
+         transition: 1s;
+      }
+
+      div.demo2 #myContent {
+         color: #d5f4e6;
+         padding: 20px;
+         font-size: 1em;
+         font-family: arial, sans-serif;
+      }
+
+      /* -----------------------------------*/
+      /* ------- START DEMO 3 STYLES -------*/
+      /* -----------------------------------*/
+      div.demo3 {
+         background-color: #2a072e;
+         padding: 20px;
+         margin: 10px;
+         font-family: arial, sans-serif;
+      }
+
+      div.demo3 .myNav {
+         border-bottom: 1px solid #b8a9c9;
+      }
+
+      div.demo3 .myNav li {
+         margin: 0px 0px 10px 0px;
+      }
+
+      div.demo3 .myNav a {
+         color: #85488b;
+         text-decoration: none;
+         padding: 0 10px;
+         font-size: 1.2em;
+         text-transform: uppercase;
+      }
+
+      div.demo3 .myNav a:hover {
+         color: #d6d4e0;
+         transition: 2s;
+         transition-timing-function: ease-in;
+      }
+
+      div.demo3 .myNav span.extraInfo {
+         opacity: 0;
+         padding-left: 5px;
+         margin-left: 100px;
+         color: #5b9aa0;
+         font-family: times, serif;
+      }
+
+      div.demo3 .myNav a:hover+span.extraInfo {
+         opacity: 1;
+         margin-left: 0px;
+         transition: 2s;
+         transition-timing-function: ease-out;
+      }
+
+      div.demo3 #myContent {
+         color: #efefef;
+         padding: 20px;
+         font-size: 1em;
+         font-family: arial, sans-serif;
+      }
+   </style>
+</head>
+
+<body>
+   <div id="mainDiv" class="demo1">
+
+      <nav class="myNav">
+         <ul>
+            <li><a href="index.html">About Us</a>
+               <span class="extraInfo">Learn more about our company</span>
+            </li>
+            <li><a href="#">Our Mission</a>
+               <span class="extraInfo">We strive to please our clients</span>
+            </li>
+            <li><a href="#">Contact</a>
+               <span class="extraInfo">Learn how to touch base with us</span>
+            </li>
+         </ul>
+      </nav>
+
+      <div id="myContent"></div>
+
+   </div>
+
+   <p>Hover over the nav links above, then change this drop-down below:</p>
+   <select id="myDropDown" onChange="changeClass(document.getElementById('myDropDown').value)">
+      <option value="demo1">Demo 1</option>
+      <option value="demo2">Demo 2</option>
+      <option value="demo3">Demo 3</option>
+   </select>
+
+
+
+   <script>
+      function changeClass(myNewClass) {
+         document.getElementById("mainDiv").className = myNewClass;
+         updateContent();
+      }
+      function updateContent() {
+         var updatedClass = document.getElementById("mainDiv").className;
+         if (updatedClass == "demo1") {
+            document.getElementById("myContent").innerHTML = "Here are some transitions featuring changes in color, opacity, letter-spacing, and margins.  Notice the \"extra info.\"  This cool effect is achieved by simply making the opacity \"0\", and moving to \"1\" with the transition.";
+         } else if (updatedClass == "demo2") {
+            document.getElementById("myContent").innerHTML = "Here is a similar effect, but with a horizontal set-up.  I am using the exact same HTML, and just changing up the styles a bit.  It's pretty neat to see the huge difference small tweaks can make in layout, colors, and transitions.  Here I just transition the color of the link, and a bit of top padding and opacity in the extra info.";
+         } else if (updatedClass == "demo3") {
+            document.getElementById("myContent").innerHTML = "Back to a stacked format, but another color change!  Plus you can see here the effect of chaning the transition-timing-function Property.  The default is used in the first two demos, which is \"ease\".  Here I use \"ease-in\" for the main link, and \"ease-out\" for the extra info.  This is a bit slow and wonky for my taste, but I wanted to show the difference in timing.";
+         }
+      }
+   </script>
+</body>
+
+</html>
