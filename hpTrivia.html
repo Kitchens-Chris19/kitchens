@@ -40,12 +40,14 @@
       Harry Potter Trivia!
    </h1>
 <div id="hpDiv" style="background-image: url('images/parchment.png');">
-   <p id="question"></p><br>
-   <input type="radio" id="radA" style="display: inline;"><p id="answerA">Answer A</p>
-   <input type="radio" id="radB" style="display: inline;"><p id="answerB">Answer B</p>
-   <input type="radio" id="radC" style="display: inline;"><p id="answerC">Answer C</p>
-   <input type="radio" id="radD" style="display: inline;"><p id="answerD">Answer D</p>
-   <button id="submitBtn" type="button" onclick="submitAnswer();">Submit Answer</button>
+   <div id="questionDiv">
+      <p id="question"></p><br>
+      <input type="radio" id="radA" style="display: inline;"> <p id="answerA">Answer A</p>
+      <input type="radio" id="radB" style="display: inline;"> <p id="answerB">Answer B</p>
+      <input type="radio" id="radC" style="display: inline;"> <p id="answerC">Answer C</p>
+      <input type="radio" id="radD" style="display: inline;"> <p id="answerD">Answer D</p>
+      <button id="submitBtn" type="button" onclick="submitAnswer();">Submit Answer</button>
+   </div>
 </div>
 
 <script>
