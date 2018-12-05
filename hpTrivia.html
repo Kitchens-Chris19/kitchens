@@ -36,15 +36,15 @@
 </head>
 
 <body>
-   <h2>
+   <h1>
       Harry Potter Trivia!
-   </h2>
+   </h1>
 <div id="hpDiv" style="background-image: url('images/parchment.png');">
-   <p id="question"></p>
-   <input type="radio" id="radA"><p id="answerA"></p>
-   <input type="radio" id="radB"><p id="answerB"></p>
-   <input type="radio" id="radC"><p id="answerC"></p>
-   <input type="radio" id="radD"><p id="answerD"></p>
+   <p id="question"></p><br>
+   <input type="radio" id="radA" style="display: inline;"><p id="answerA">Answer A</p>
+   <input type="radio" id="radB" style="display: inline;"><p id="answerB">Answer B</p>
+   <input type="radio" id="radC" style="display: inline;"><p id="answerC">Answer C</p>
+   <input type="radio" id="radD" style="display: inline;"><p id="answerD">Answer D</p>
    <button id="submitBtn" type="button" onclick="submitAnswer();">Submit Answer</button>
 </div>
 
@@ -53,11 +53,40 @@ function submitAnswer() {
 
 }
 
-var profiles = xml.getElementsByTagName("profile");
+// var profiles = xml.getElementsByTagName("profile");
+// var arr = [];
+// for (var key in profiles){
+//     arr.push([]);
+//     var nodes = profiles[key].childNodes;
+//     for (var ele in nodes){  
+//         if(nodes[ele]){
+//           arr[key].push(nodes[ele]);
+//         }
+//     }
+// }
+// console.log(arr);
+// 
+// function loadDoc() {
+//   var xhttp = new XMLHttpRequest();
+//   xhttp.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//      document.getElementById("demo").innerHTML = this.responseText;
+//     }
+//   };
+//   xhttp.open("GET", "ajax_test.txt", true);
+//   xhttp.send();
+// }
+
+var x,xmlhttp,xmlDoc;
+xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET", "quiz.xml", true);
+xmlhttp.send();
+xmlDoc = xmlhttp.responseXML; 
+x = xmlDoc.getElementsByTagName("question");
 var arr = [];
-for (var key in profiles){
+for (var key in x){
     arr.push([]);
-    var nodes = profiles[key].childNodes;
+    var nodes = x[key].childNodes;
     for (var ele in nodes){  
         if(nodes[ele]){
           arr[key].push(nodes[ele]);
@@ -65,6 +94,15 @@ for (var key in profiles){
     }
 }
 console.log(arr);
+// table="<tr><th>GPU</th><th>VRAM</th></tr>";
+// for (i = 0; i <x.length; i++) { 
+//   table += "<tr onclick='displayGPU(" + i + ")'><td>";
+//   table += x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue;
+//   table += "</td><td>";
+//   table +=  x[i].getElementsByTagName("VRAM")[0].childNodes[0].nodeValue;
+//   table += "</td></tr>";
+// }
+
 </script>
 </body>
 </html>
