@@ -77,9 +77,9 @@ function submitAnswer() {
 //   xhttp.send();
 // }
 
-var x,xmlhttp,xmlDoc;
+var x,xmlhttp,xmlDoc
 xmlhttp = new XMLHttpRequest();
-xmlhttp.open("GET", "quiz.xml", false);
+xmlhttp.open("GET", "quiz.xml", true);
 xmlhttp.send();
 xmlDoc = xmlhttp.responseXML; 
 x = xmlDoc.getElementsByTagName("question");
