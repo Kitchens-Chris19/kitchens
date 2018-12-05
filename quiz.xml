@@ -1,34 +1,34 @@
-<quiz>
-   <question>
-      <text>What house does Harry Potter belong to?</text>
-      <answerA>Gryffindor</answerA>
-      <answerB>Slytherin</answerB>
-      <answerC>Hufflepuff</ansswerC>
-      <answerD>Ravenclaw</answerD>
-      <correctAnswer>a</correctAnswer>
-   </question>
-   <question>
-      <text>Who killed Neville Longbottom's parents?</text>
-      <answerA>Voldemort</answerA>
-      <answerB>Snape</answerB>
-      <answerC>Belletrix Lestrange</ansswerC>
-      <answerD>Mad-Eye Moody</answerD>
-      <correctAnswer>c</correctAnswer>
-   </question>
-   <question>
-      <text>Who teaches Defense Against the Dark Arts during Harry's third year?</text>
-      <answerA>Trelawney</answerA>
-      <answerB>Dumbledore</answerB>
-      <answerC>Lupin</ansswerC>
-      <answerD>Lockhart</answerD>
-      <correctAnswer>c</correctAnswer>
-   </question>
-   <question>
-      <text>What material is found in both Harry Potter's wand and Voldemort's?</text>
-      <answerA>Dragon Heartstring</answerA>
-      <answerB>Phoenix Feather</answerB>
-      <answerC>Unicorn Hair</ansswerC>
-      <answerD>Newt Claws</answerD>
-      <correctAnswer>b</correctAnswer>
-   </question>
-</quiz>
+<QUIZ>
+   <QUESTION>
+      <TEXT>What house does Harry Potter belong to?</TEXT>
+      <ANSWERA>Gryffindor</ANSWERA>
+      <ANSWERB>Slytherin</ANSWERB>
+      <ANSWERC>Hufflepuff</ANSWERC>
+      <ANSWERD>Ravenclaw</ANSWERD>
+      <CORRECTANSWER>a</CORRECTANSWER>
+   </QUESTION>
+   <QUESTION>
+      <TEXT>Who killed Neville Longbottom's parents?</TEXT>
+      <ANSWERA>Voldemort</ANSWERA>
+      <ANSWERB>Snape</ANSWERB>
+      <ANSWERC>Belletrix Lestrange</ANSWERC>
+      <ANSWERD>Mad-Eye Moody</ANSWERD>
+      <CORRECTANSWER>c</CORRECTANSWER>
+   </QUESTION>
+   <QUESTION>
+      <TEXT>Who teaches Defense Against the Dark Arts during Harry's third year?</TEXT>
+      <ANSWERA>Trelawney</ANSWERA>
+      <ANSWERB>Dumbledore</ANSWERB>
+      <ANSWERC>Lupin</ANSWERC>
+      <ANSWERD>Lockhart</ANSWERD>
+      <CORRECTANSWER>c</CORRECTANSWER>
+   </QUESTION>
+   <QUESTION>
+      <TEXT>What material is found in both Harry Potter's wand and Voldemort's?</TEXT>
+      <ANSWERA>Dragon Heartstring</ANSWERA>
+      <ANSWERB>Phoenix Feather</ANSWERB>
+      <ANSWERC>Unicorn Hair</ANSWERC>
+      <ANSWERD>Newt Claws</ANSWERD>
+      <CORRECTANSWER>b</CORRECTANSWER>
+   </QUESTION>
+</QUIZ>
