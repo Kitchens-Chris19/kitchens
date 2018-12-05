@@ -2,6 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="hpStyle.css">
+<link href="https://fonts.googleapis.com/css?family=Galdeano" rel="stylesheet">
 <div class="navbar">
    <a href="index.html">Home</a>
    <a href="ajax.html">AJAX</a>
@@ -38,10 +39,32 @@
    <h2>
       Harry Potter Trivia!
    </h2>
-<div style="background-image: url('images/parchment.png');">
-   Text.
+<div id="hpDiv" style="background-image: url('images/parchment.png');">
+   <p id="question"></p>
+   <input type="radio" id="radA"><p id="answerA"></p>
+   <input type="radio" id="radB"><p id="answerB"></p>
+   <input type="radio" id="radC"><p id="answerC"></p>
+   <input type="radio" id="radD"><p id="answerD"></p>
+   <button id="submitBtn" type="button" onclick="submitAnswer();">Submit Answer</button>
 </div>
 
+<script>
+function submitAnswer() {
 
+}
+
+var profiles = xml.getElementsByTagName("profile");
+var arr = [];
+for (var key in profiles){
+    arr.push([]);
+    var nodes = profiles[key].childNodes;
+    for (var ele in nodes){  
+        if(nodes[ele]){
+          arr[key].push(nodes[ele]);
+        }
+    }
+}
+console.log(arr);
+</script>
 </body>
 </html>
