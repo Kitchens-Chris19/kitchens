@@ -59,9 +59,10 @@ button:hover {
 }
 
 div {
-   width: auto;
-   height: auto;
-   background-color: yellowgreen;
+   width: 70%;
+   height: 1200px;
+   align-content: center;
+   align-self: center;
    border: 1px solid black
 }
 
