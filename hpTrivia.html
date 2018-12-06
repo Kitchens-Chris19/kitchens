@@ -55,15 +55,48 @@
    </div>
 </div>
 
+<table id="table"></table>
+
 <script>
 function submitAnswer() {
 
 }
 
 function loadQuiz() {
-   var x = table.rows[0].cells;
-   document.getElementById("question").innerHTML = x[1].innerHTML;
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xhttp.open("GET", "quiz.xml", true);
+  xhttp.send();
 }
+
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>Question</th><th>AnswerA</th><th>AnswerB</th><th>AnswerC</th><th>AnswerD</th><th>CorrectAnswer</th></tr>";
+  var x = xmlDoc.getElementsByTagName("QUESTION");
+  for (i = 0; i <x.length; i++) { 
+   table += "<tr><td>";
+  table += x[i].getElementsByTagName("TEXT")[0].childNodes[0].nodeValue;
+  table += "</td><td>";
+  table +=  x[i].getElementsByTagName("ANSWERA")[0].childNodes[0].nodeValue;
+  table += "</td><td>";
+  table +=  x[i].getElementsByTagName("ANSWERB")[0].childNodes[0].nodeValue;
+  table += "</td><td>";
+  table +=  x[i].getElementsByTagName("ANSWERC")[0].childNodes[0].nodeValue;
+  table += "</td><td>";
+  table +=  x[i].getElementsByTagName("ANSWERD")[0].childNodes[0].nodeValue;
+  table += "</td><td>";
+  table +=  x[i].getElementsByTagName("CORRECTANSWER")[0].childNodes[0].nodeValue;
+  table += "</td></tr>";
+  }
+  document.getElementById("table").innerHTML = table;
+}
+
 
 // var profiles = xml.getElementsByTagName("profile");
 // var arr = [];
@@ -89,40 +122,40 @@ function loadQuiz() {
 //   xhttp.send();
 // }
 
-var x,xmlhttp,xmlDoc
-xmlhttp = new XMLHttpRequest();
-xmlhttp.open("GET", "quiz.xml", false);
-xmlhttp.send();
-xmlDoc = xmlhttp.responseXML; 
-x = xmlDoc.getElementsByTagName("QUESTION");
-// var arr = [];
-// for (var key in x){
-//     arr.push([]);
-//     var nodes = x[key].childNodes;
-//     for (var ele in nodes){  
-//         if(nodes[ele]){
-//           arr[key].push(nodes[ele]);
-//         }
-//     }
+// var x,xmlhttp,xmlDoc
+// xmlhttp = new XMLHttpRequest();
+// xmlhttp.open("GET", "quiz.xml", false);
+// xmlhttp.send();
+// xmlDoc = xmlhttp.responseXML; 
+// x = xmlDoc.getElementsByTagName("QUESTION");
+// // var arr = [];
+// // for (var key in x){
+// //     arr.push([]);
+// //     var nodes = x[key].childNodes;
+// //     for (var ele in nodes){  
+// //         if(nodes[ele]){
+// //           arr[key].push(nodes[ele]);
+// //         }
+// //     }
+// // }
+// // console.log(arr);
+// table="<tr><th>Question</th><th>AnswerA</th><th>AnswerB</th><th>AnswerC</th><th>AnswerD</th><th>CorrectAnswer</th></tr>";
+// for (i = 0; i <x.length; i++) { 
+//   table += "<tr><td>";
+//   table += x[i].getElementsByTagName("TEXT")[0].childNodes[0].nodeValue;
+//   table += "</td><td>";
+//   table +=  x[i].getElementsByTagName("ANSWERA")[0].childNodes[0].nodeValue;
+//   table += "</td><td>";
+//   table +=  x[i].getElementsByTagName("ANSWERB")[0].childNodes[0].nodeValue;
+//   table += "</td><td>";
+//   table +=  x[i].getElementsByTagName("ANSWERC")[0].childNodes[0].nodeValue;
+//   table += "</td><td>";
+//   table +=  x[i].getElementsByTagName("ANSWERD")[0].childNodes[0].nodeValue;
+//   table += "</td><td>";
+//   table +=  x[i].getElementsByTagName("CORRECTANSWER")[0].childNodes[0].nodeValue;
+//   table += "</td></tr>";
 // }
-// console.log(arr);
-table="<tr><th>Question</th><th>AnswerA</th><th>AnswerB</th><th>AnswerC</th><th>AnswerD</th><th>CorrectAnswer</th></tr>";
-for (i = 0; i <x.length; i++) { 
-  table += "<tr><td>";
-  table += x[i].getElementsByTagName("TEXT")[0].childNodes[0].nodeValue;
-  table += "</td><td>";
-  table +=  x[i].getElementsByTagName("ANSWERA")[0].childNodes[0].nodeValue;
-  table += "</td><td>";
-  table +=  x[i].getElementsByTagName("ANSWERB")[0].childNodes[0].nodeValue;
-  table += "</td><td>";
-  table +=  x[i].getElementsByTagName("ANSWERC")[0].childNodes[0].nodeValue;
-  table += "</td><td>";
-  table +=  x[i].getElementsByTagName("ANSWERD")[0].childNodes[0].nodeValue;
-  table += "</td><td>";
-  table +=  x[i].getElementsByTagName("CORRECTANSWER")[0].childNodes[0].nodeValue;
-  table += "</td></tr>";
-}
-console.log(table);
+// console.log(table);
 
 </script>
 </body>
