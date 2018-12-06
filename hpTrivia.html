@@ -35,7 +35,7 @@
 </div>
 </head>
 
-<body>
+<body onload="loadXML();">
    <h1>
       Harry Potter Trivia!
    </h1>
@@ -58,11 +58,21 @@
 <table id="table"></table>
 
 <script>
+function cycleQuestion() {
+
+}
+
 function submitAnswer() {
 
 }
 
 function loadQuiz() {
+   var data = document.getElementById("table").rows[0].cells;
+   document.getElementById("question").innerHTML = data[0].innerHTML;
+   document.getElementById("answerA").innerHTML = data[1].innerHTML;
+}
+
+function loadXML() {
 
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -96,66 +106,6 @@ function myFunction(xml) {
   }
   document.getElementById("table").innerHTML = table;
 }
-
-
-// var profiles = xml.getElementsByTagName("profile");
-// var arr = [];
-// for (var key in profiles){
-//     arr.push([]);
-//     var nodes = profiles[key].childNodes;
-//     for (var ele in nodes){  
-//         if(nodes[ele]){
-//           arr[key].push(nodes[ele]);
-//         }
-//     }
-// }
-// console.log(arr);
-// 
-// function loadDoc() {
-//   var xhttp = new XMLHttpRequest();
-//   xhttp.onreadystatechange = function() {
-//     if (this.readyState == 4 && this.status == 200) {
-//      document.getElementById("demo").innerHTML = this.responseText;
-//     }
-//   };
-//   xhttp.open("GET", "ajax_test.txt", true);
-//   xhttp.send();
-// }
-
-// var x,xmlhttp,xmlDoc
-// xmlhttp = new XMLHttpRequest();
-// xmlhttp.open("GET", "quiz.xml", false);
-// xmlhttp.send();
-// xmlDoc = xmlhttp.responseXML; 
-// x = xmlDoc.getElementsByTagName("QUESTION");
-// // var arr = [];
-// // for (var key in x){
-// //     arr.push([]);
-// //     var nodes = x[key].childNodes;
-// //     for (var ele in nodes){  
-// //         if(nodes[ele]){
-// //           arr[key].push(nodes[ele]);
-// //         }
-// //     }
-// // }
-// // console.log(arr);
-// table="<tr><th>Question</th><th>AnswerA</th><th>AnswerB</th><th>AnswerC</th><th>AnswerD</th><th>CorrectAnswer</th></tr>";
-// for (i = 0; i <x.length; i++) { 
-//   table += "<tr><td>";
-//   table += x[i].getElementsByTagName("TEXT")[0].childNodes[0].nodeValue;
-//   table += "</td><td>";
-//   table +=  x[i].getElementsByTagName("ANSWERA")[0].childNodes[0].nodeValue;
-//   table += "</td><td>";
-//   table +=  x[i].getElementsByTagName("ANSWERB")[0].childNodes[0].nodeValue;
-//   table += "</td><td>";
-//   table +=  x[i].getElementsByTagName("ANSWERC")[0].childNodes[0].nodeValue;
-//   table += "</td><td>";
-//   table +=  x[i].getElementsByTagName("ANSWERD")[0].childNodes[0].nodeValue;
-//   table += "</td><td>";
-//   table +=  x[i].getElementsByTagName("CORRECTANSWER")[0].childNodes[0].nodeValue;
-//   table += "</td></tr>";
-// }
-// console.log(table);
 
 </script>
 </body>
