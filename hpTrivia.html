@@ -39,6 +39,9 @@
    <h1>
       Harry Potter Trivia!
    </h1>
+<div id="leftDiv">
+<button id="loadBtn" type="button" onclick="loadQuiz();">Load Quiz</button>
+</div>
 <div id="hpDiv" style="background-image: url('images/parchment.png');">
    <div id="questionDiv" style="transform:translate(300px, 100px);">
       <h3 id="question">Question</h3><br><br>
@@ -55,6 +58,11 @@
 <script>
 function submitAnswer() {
 
+}
+
+function loadQuiz() {
+   var q = arr.getElementsByTagName("QUESTION")[0];
+   document.getElementById("question").innerHTML = q;
 }
 
 // var profiles = xml.getElementsByTagName("profile");
