@@ -61,7 +61,8 @@ function submitAnswer() {
 }
 
 function loadQuiz() {
-   document.getElementById("question").innerHTML = "quizzzz";
+   var x = table.rows[0].cells;
+   document.getElementById("question").innerHTML = x[1].innerHTML;
 }
 
 // var profiles = xml.getElementsByTagName("profile");
