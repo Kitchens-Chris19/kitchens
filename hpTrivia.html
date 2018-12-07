@@ -85,9 +85,13 @@
 
       function loadPlayer() {
          player = JSON.parse(localStorage.getItem("player"));
-         document.getElementById("name").innerHTML = player.name;
-         document.getElementById("house").innerHTML = player.house;
-         document.getElementById("points").innerHTML = player.points;
+         if (player!=null) {
+            document.getElementById("name").innerHTML = player.name;
+            document.getElementById("house").innerHTML = player.house;
+            document.getElementById("points").innerHTML = player.points;
+         } else {
+            alert("No players in storage.");
+         }
       }
 
       function getData() {
