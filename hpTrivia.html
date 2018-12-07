@@ -46,10 +46,10 @@
    <div id="questionDiv" style="transform:translate(300px, 100px);">
       <h3 id="question">Question</h3><br><br>
       
-         <input type="radio" name="answer" id="radA"> <h4 id="a" style="display: inline;">Answer A</h4> <br><br>
-         <input type="radio" name="answer" id="radB"> <h4 id="b" style="display: inline;">Answer B</h4> <br><br>
-         <input type="radio" name="answer" id="radC"> <h4 id="c" style="display: inline;">Answer C</h4> <br><br>
-         <input type="radio" name="answer" id="radD"> <h4 id="d" style="display: inline;">Answer D</h4> <br><br>
+         <input type="radio" name="answer" id="a" value="a"> <h4 id="ha" style="display: inline;">Answer A</h4> <br><br>
+         <input type="radio" name="answer" id="b" value="b"> <h4 id="hb" style="display: inline;">Answer B</h4> <br><br>
+         <input type="radio" name="answer" id="c" value="c"> <h4 id="hc" style="display: inline;">Answer C</h4> <br><br>
+         <input type="radio" name="answer" id="d" value="d"> <h4 id="hd" style="display: inline;">Answer D</h4> <br><br>
       
       <button id="submitBtn" type="button" onclick="submitAnswer(counter);">Submit Answer</button>
    </div>
@@ -63,7 +63,7 @@ var counter = 1;
 function submitAnswer(questionNum) {
    var data = document.getElementById("table").rows[questionNum].cells;
    var correctAnswer = data[5].innerHTML;
-   var userAnswer = document.querySelector('input[name="answer"]:checked').innerHTML;
+   var userAnswer = document.querySelector('input[name="answer"]:checked').value;
    console.log("correctAnswer: " + correctAnswer);
    console.log("userAnswer: " + userAnswer);
    
@@ -79,10 +79,10 @@ function submitAnswer(questionNum) {
 function loadQuiz(questionNum) {
    var data = document.getElementById("table").rows[questionNum].cells;
    document.getElementById("question").innerHTML = data[0].innerHTML;
-   document.getElementById("a").innerHTML = data[1].innerHTML;
-   document.getElementById("b").innerHTML = data[2].innerHTML;
-   document.getElementById("c").innerHTML = data[3].innerHTML;
-   document.getElementById("d").innerHTML = data[4].innerHTML;   
+   document.getElementById("ha").innerHTML = data[1].innerHTML;
+   document.getElementById("hb").innerHTML = data[2].innerHTML;
+   document.getElementById("hc").innerHTML = data[3].innerHTML;
+   document.getElementById("hd").innerHTML = data[4].innerHTML;   
 }
 
 function loadXML() {
