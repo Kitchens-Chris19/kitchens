@@ -99,7 +99,7 @@
          this.house = house;
          this.points = 0;
       }
-      
+
       function getData() {
          name = prompt("Enter your name.", "Name");
          house = prompt("Enter your Hogwarts House.", "House");
@@ -131,6 +131,8 @@
          console.log("userAnswer: " + userAnswer);
 
          if (correctAnswer == userAnswer) {
+            player.points += 10;
+            document.getElementById('points').innerHTML = player.points;
             counter++;
             if (counter < 5) {
                loadQuiz(counter);
