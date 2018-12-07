@@ -41,18 +41,18 @@
       Harry Potter Trivia!
    </h1>
    <div id="leftDiv">
-      <button id="loadBtn" type="button" onclick="loadQuiz(counter);">Load Quiz</button>
+      <button id="loadBtn" type="button" onclick="loadQuiz(counter);" style="float: left; position: absolute;">Load Quiz</button>
    </div>
 
-   <div id="playerInfo" style="float:left; position: absolute;">
+   <div id="playerInfo" style="float:left; position: absolute; background-color: black;">
       <h2>Player Info</h2>
       <p id="name">Name</p>
       <p id="house">House</p>
       <p id="points">0</p>
-      <button type="button" id="getData" onclick=getData()>Input Data</button>
-      <button type="button" id="saveStorage" onclick=savePlayer()>Save to local storage</button>
-      <button type="button" id="loadStorage" onclick=loadPlayer()>Load data</button>
-      <button type="button" id="clear" onclick = localStorage.clear()>Clear player info</button>
+      <button type="button" id="getData" onclick=getData()>Input Data</button> <br>
+      <button type="button" id="saveStorage" onclick=savePlayer()>Save</button> <br>
+      <button type="button" id="loadStorage" onclick=loadPlayer()>Load data</button> <br>
+      <button type="button" id="clear" onclick = localStorage.clear()>Clear player info</button> <br>
    </div>
 
    <div id="hpDiv" style="background-image: url('images/parchment.png');">
