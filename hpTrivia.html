@@ -158,7 +158,7 @@
          btn.style.display = "none";
 
          var x = document.getElementById('questionDiv');
-         x.style.display = "contents";
+         x.removeAttribute('display');
 
          var data = document.getElementById("table").rows[questionNum].cells;
          document.getElementById("question").innerHTML = data[0].innerHTML;
