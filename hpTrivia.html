@@ -85,7 +85,7 @@ function submitAnswer(questionNum) {
          loadQuiz(counter);
       } else if (counter == 5) {
          youWin();
-         break;
+         return;
       }
    } else {
       alert("WRONG");
