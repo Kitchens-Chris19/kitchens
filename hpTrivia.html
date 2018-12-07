@@ -61,19 +61,25 @@
 var counter = 1;
 
 function submitAnswer(questionNum) {
-   var data = document.getElementById("table").rows[questionNum].cells;
-   var correctAnswer = data[5].innerHTML;
-   var userAnswer = document.querySelector('input[name="answer"]:checked').value;
-   console.log("correctAnswer: " + correctAnswer);
-   console.log("userAnswer: " + userAnswer);
-   
-   if (correctAnswer == userAnswer) {
-      counter++;
-      loadQuiz(counter);
-   } else {
-      alert("WRONG");
-   }
+   if (questionNum < 5) {
+      var data = document.getElementById("table").rows[questionNum].cells;
+      var correctAnswer = data[5].innerHTML;
+      var userAnswer = document.querySelector('input[name="answer"]:checked').value;
+      console.log("correctAnswer: " + correctAnswer);
+      console.log("userAnswer: " + userAnswer);
+      
+      if (correctAnswer == userAnswer) {
+         counter++;
+         loadQuiz(counter);
+      } else {
+         alert("WRONG");
+      }
 
+      var radios = document.getElementsByName("answer");
+      radios.forEach(element => {
+         element.setAttribute('checked', false);
+      });
+   }
 }
 
 function loadQuiz(questionNum) {
