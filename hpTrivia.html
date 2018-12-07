@@ -63,7 +63,7 @@ var counter = 1;
 function submitAnswer(questionNum) {
    var data = document.getElementById("table").rows[questionNum].cells;
    var correctAnswer = data[5].innerHTML;
-   var userAnswer = document.querySelector('input[name="answer"]:checked').value;
+   var userAnswer = document.querySelector('input[name="answer"]:checked').innerHTML;
    console.log("correctAnswer: " + correctAnswer);
    console.log("userAnswer: " + userAnswer);
    
