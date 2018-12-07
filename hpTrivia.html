@@ -40,39 +40,46 @@
       Harry Potter Trivia!
    </h1>
 <div id="leftDiv">
-<button id="loadBtn" type="button" onclick="loadQuiz();">Load Quiz</button>
+<button id="loadBtn" type="button" onclick="loadQuiz(counter);">Load Quiz</button>
 </div>
 <div id="hpDiv" style="background-image: url('images/parchment.png');">
    <div id="questionDiv" style="transform:translate(300px, 100px);">
       <h3 id="question">Question</h3><br><br>
       <form>
-         <input type="radio" name="answer" id="radA"> <h4 id="answerA" style="display: inline;">Answer A</h4> <br><br>
-         <input type="radio" name="answer" id="radB"> <h4 id="answerB" style="display: inline;">Answer B</h4> <br><br>
-         <input type="radio" name="answer" id="radC"> <h4 id="answerC" style="display: inline;">Answer C</h4> <br><br>
-         <input type="radio" name="answer" id="radD"> <h4 id="answerD" style="display: inline;">Answer D</h4> <br><br>
+         <input type="radio" name="answer" id="radA"> <h4 id="a" style="display: inline;">Answer A</h4> <br><br>
+         <input type="radio" name="answer" id="radB"> <h4 id="b" style="display: inline;">Answer B</h4> <br><br>
+         <input type="radio" name="answer" id="radC"> <h4 id="c" style="display: inline;">Answer C</h4> <br><br>
+         <input type="radio" name="answer" id="radD"> <h4 id="d" style="display: inline;">Answer D</h4> <br><br>
       </form>
-      <button id="submitBtn" type="button" onclick="submitAnswer();">Submit Answer</button>
+      <button id="submitBtn" type="button" onclick="submitAnswer(counter);">Submit Answer</button>
    </div>
 </div>
 
-<table id="table"></table>
+<table id="table" style="display: none;"></table>
 
 <script>
-function cycleQuestion() {
+var counter = 1;
+
+function submitAnswer(questionNum) {
+   var data = document.getElementById("table").rows[questionNum].cells;
+   var correctAnswer = data[5].innerHTML;
+   var userAnswer = document.querySelector('input[name="answer"]:checked').value;
+   if (correctAnswer == userAnswer) {
+      counter++;
+      loadQuiz(counter);
+   } else {
+      alert("WRONG");
+   }
 
 }
 
-function submitAnswer() {
-
-}
-
-function loadQuiz() {
-   var data = document.getElementById("table").rows[1].cells;
+function loadQuiz(questionNum) {
+   var data = document.getElementById("table").rows[questionNum].cells;
    document.getElementById("question").innerHTML = data[0].innerHTML;
-   document.getElementById("answerA").innerHTML = data[1].innerHTML;
-   document.getElementById("answerB").innerHTML = data[2].innerHTML;
-   document.getElementById("answerC").innerHTML = data[3].innerHTML;
-   document.getElementById("answerD").innerHTML = data[4].innerHTML;   
+   document.getElementById("a").innerHTML = data[1].innerHTML;
+   document.getElementById("b").innerHTML = data[2].innerHTML;
+   document.getElementById("c").innerHTML = data[3].innerHTML;
+   document.getElementById("d").innerHTML = data[4].innerHTML;   
 }
 
 function loadXML() {
