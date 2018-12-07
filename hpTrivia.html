@@ -91,12 +91,14 @@
       }
 
       function getData() {
-         name = prompt("Enter your name.", "No name entered.");
-         house = prompt("Enter your Hogwarts House.", "Guess you're not a Hogwarts student...");
+         name = prompt("Enter your name.", "Name");
+         house = prompt("Enter your Hogwarts House.", "House");
 
          player = new player(name, house);
          document.getElementById('name').innerHTML = player.name;
          document.getElementById('house').innerHTML = player.house;
+         var x = document.getElementById('getData');
+         x.setAttribute('disabled', '');
       }
 
       function player(name, house) {
