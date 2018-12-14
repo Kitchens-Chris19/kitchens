@@ -108,8 +108,9 @@ div#cssMatrix {
 }
 
 .hero-image {
+   background-image: url('images/parchment.png');
    background-color: #cccccc;
-   height: auto;
+   height: 500px;
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
