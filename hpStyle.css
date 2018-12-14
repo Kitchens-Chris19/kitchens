@@ -54,8 +54,7 @@ button {
 }
 
 button:hover {
-   transform: scale(0.95);
-   background-color: greenyellow;
+   transform: scale(0.97);
 }
 
 div#hpDiv {
