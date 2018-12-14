@@ -120,7 +120,7 @@ div#cssMatrix {
    animation: glow 2s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes glow {
+@keyframes glow {
    from {
       text-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px red, 0 0 40px orange, 0 0 50px orange, 0 0 60px black, 0 0 70px black;
    }
@@ -130,7 +130,18 @@ div#cssMatrix {
    }
 }
 
+@keyframes hover {
+   from {
+      transform: translate(30%, -1%);
+   }
+
+   to {
+      transform: translate(30%, 1%);
+   }
+}
+
 .hero-image {
+   animation: hover 2s ease-in-out infinite alternate;
    background-image: url('images/parchment.png');
    height: 1245px;
    background-position: center;
