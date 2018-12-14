@@ -38,19 +38,20 @@
 
 <body onload="loadXML();">
    <div id="leftDiv">
-      <button id="loadBtn" type="button" onclick="loadQuiz(counter);" style="float: left; position: absolute;">Load Quiz</button>
+      <button id="loadBtn" type="button" onclick="loadQuiz(counter);" style="float: left; position: absolute;">Load Quiz</button> <br>
+      <div id="playerInfo">
+            <h2>Player Info</h2>
+            <p id="name">Name</p>
+            <p id="house">House</p>
+            <p id="points">0</p>
+            <button type="button" id="getData" onclick=getData()>Input Data</button> <br>
+            <button type="button" id="saveStorage" onclick=savePlayer()>Save</button> <br>
+            <button type="button" id="loadStorage" onclick=loadPlayer()>Load data</button> <br>
+            <button type="button" id="clear" onclick = localStorage.clear()>Clear player info</button> <br>
+         </div>
    </div>
 
-   <div id="playerInfo">
-      <h2>Player Info</h2>
-      <p id="name">Name</p>
-      <p id="house">House</p>
-      <p id="points">0</p>
-      <button type="button" id="getData" onclick=getData()>Input Data</button> <br>
-      <button type="button" id="saveStorage" onclick=savePlayer()>Save</button> <br>
-      <button type="button" id="loadStorage" onclick=loadPlayer()>Load data</button> <br>
-      <button type="button" id="clear" onclick = localStorage.clear()>Clear player info</button> <br>
-   </div>
+   
 
    <div class="hero-image" style="background-image: url('images/parchment.png');">
       <div class="hero-text">
