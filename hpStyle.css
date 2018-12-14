@@ -107,6 +107,11 @@ div#cssMatrix {
    width: 200px;
 }
 
+#questionContainer {
+   text-align: left;
+   transform: translate(30%);
+}
+
 .hero-image {
    background-image: url('images/parchment.png');
    height: 1245px;
