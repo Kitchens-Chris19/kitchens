@@ -108,6 +108,7 @@ div#cssMatrix {
    position: absolute; 
    background-color: black; 
    transform: translateY(40px);
+   width: 200px;
 }
 
 .hero-image {
