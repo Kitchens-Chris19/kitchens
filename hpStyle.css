@@ -109,7 +109,20 @@ div#cssMatrix {
 
 #questionContainer {
    text-align: left;
-   transform: translate(30%);
+   transform: translate(42%);
+   width: 500px;
+}
+
+#leftDiv {
+   float: left;
+}
+
+#rightDiv {
+   float: left;
+   position: absolute;
+   background-color: black;
+   transform: translateY(150px);
+   width: 200px;
 }
 
 .hero-image {
