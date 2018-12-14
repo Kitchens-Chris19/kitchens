@@ -36,10 +36,7 @@
    </div>
 </head>
 
-<body onload="loadXML();" style="background-image: url('images/parchment.png');">
-   <h1>
-      Harry Potter Trivia!
-   </h1>
+<body onload="loadXML();">
    <div id="leftDiv">
       <button id="loadBtn" type="button" onclick="loadQuiz(counter);" style="float: left; position: absolute;">Load Quiz</button>
    </div>
@@ -55,24 +52,34 @@
       <button type="button" id="clear" onclick = localStorage.clear()>Clear player info</button> <br>
    </div>
 
-   <div id="hpDiv">
-      <div id="questionDiv" style="transform:translate(300px, 100px); display: none;">
-         <h3 id="question">Question</h3><br><br>
-
-         <input type="radio" name="answer" id="a" value="a">
-         <h4 id="ha" style="display: inline;">Answer A</h4> <br><br>
-         <input type="radio" name="answer" id="b" value="b">
-         <h4 id="hb" style="display: inline;">Answer B</h4> <br><br>
-         <input type="radio" name="answer" id="c" value="c">
-         <h4 id="hc" style="display: inline;">Answer C</h4> <br><br>
-         <input type="radio" name="answer" id="d" value="d">
-         <h4 id="hd" style="display: inline;">Answer D</h4> <br><br>
-
-         <button id="submitBtn" type="button" onclick="submitAnswer(counter);">Submit Answer</button>
+   <div class="hero-image">
+      <div class="hero-text">
+         <h1>
+            Harry Potter Trivia!
+         </h1>
+         <div id="hpDiv">
+            <div id="questionDiv" style="display: none;">
+               <h3 id="question">Question</h3><br><br>
+      
+               <input type="radio" name="answer" id="a" value="a">
+               <h4 id="ha" style="display: inline;">Answer A</h4> <br><br>
+               <input type="radio" name="answer" id="b" value="b">
+               <h4 id="hb" style="display: inline;">Answer B</h4> <br><br>
+               <input type="radio" name="answer" id="c" value="c">
+               <h4 id="hc" style="display: inline;">Answer C</h4> <br><br>
+               <input type="radio" name="answer" id="d" value="d">
+               <h4 id="hd" style="display: inline;">Answer D</h4> <br><br>
+      
+               <button id="submitBtn" type="button" onclick="submitAnswer(counter);">Submit Answer</button>
+            </div>
+         </div>
       </div>
    </div>
+   
 
    <table id="table" style="display: none;"></table>
+
+   
 
    <script>
       var counter = 1;

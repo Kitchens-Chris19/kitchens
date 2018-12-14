@@ -66,6 +66,10 @@ div#hpDiv {
    margin: auto;
 }
 
+/* div#questionDiv {
+   transform:translate(300px, 100px);
+} */
+
 div#cssRotate {
    transform: rotate(20deg); /* negative values rotate counter-clockwise*/
 }
@@ -97,6 +101,25 @@ div#cssMatrix {
    height: 50px;
    position: absolute;
    background: red;
+}
+
+.hero-image {
+   background-image: url('images/parchment.png');
+   background-color: #cccccc;
+   height: auto;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+}
+
+.hero-text {
+   text-align: center;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: white;
 }
 
 /* ************** */
