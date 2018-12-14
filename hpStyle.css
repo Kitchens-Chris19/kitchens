@@ -1,6 +1,8 @@
 body {
-   background-color: rgb(107, 107, 107);
+   background-color: #2F1F82;
    margin: 0px;
+   background-repeat: no-repeat;
+   background-position-y: bottom;
    background-image: url('images/sitebackground.png');
 }
 
@@ -116,14 +118,6 @@ div#cssMatrix {
 
 #leftDiv {
    float: left;
-}
-
-#rightDiv {
-   float: left;
-   position: absolute;
-   background-color: black;
-   transform: translateY(340px);
-   width: 200px;
 }
 
 .hero-image {
