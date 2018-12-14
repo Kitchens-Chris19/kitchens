@@ -122,8 +122,9 @@ div#cssMatrix {
    position: absolute;
    top: 17%;
    left: 50%;
-   transform: translate(-50%, -50%);
+   transform: translate(-50%, -5%);
    color: white;
+   height: 600px;
 }
 
 /* ************** */
