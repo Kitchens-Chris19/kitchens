@@ -120,24 +120,8 @@ div#cssMatrix {
    animation: glow 2s ease-in-out infinite alternate;
 }
 
-@keyframes glow {
-   from {
-      text-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px red, 0 0 40px orange, 0 0 50px orange, 0 0 60px black, 0 0 70px black;
-   }
-   
-   to {
-   text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red, 0 0 80px red;
-   }
-}
-
-@keyframes hover {
-   from {
-      transform: translate(30%, -1%);
-   }
-
-   to {
-      transform: translate(30%, 1%);
-   }
+.glowGold {
+   animation: glowGold 2s ease-in-out infinite alternate;
 }
 
 .hero-image {
@@ -286,4 +270,37 @@ font-weight: bold;
 color: #000;
 text-decoration: none;
 cursor: pointer;
+}
+
+/* *********** */
+/* Animations  */
+/* *********** */
+@keyframes glow {
+   from {
+      text-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px red, 0 0 40px orange, 0 0 50px orange, 0 0 60px black, 0 0 70px black;
+   }
+   
+   to {
+   text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red, 0 0 80px red;
+   }
+}
+
+@keyframes glowGold {
+   from {
+      border-color: 0 0 10px black, 0 0 20px black, 0 0 30px black, 0 0 40px black, 0 0 50px black, 0 0 60px black, 0 0 70px black;
+   }
+   
+   to {
+      border-color: 0 0 20px gold, 0 0 30px gold, 0 0 40px gold, 0 0 50px gold, 0 0 60px yellow, 0 0 70px yellow, 0 0 80px yellow;
+   }
+}
+
+@keyframes hover {
+   from {
+      transform: translate(30%, -1%);
+   }
+
+   to {
+      transform: translate(30%, 1%);
+   }
 }
