@@ -22,12 +22,8 @@ a {
 }
 
 ul {
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-   width: 150px;
-   background-color: #f1f1f1;
-   height: 100%;
+   font-family: 'Galdeano', fantasy, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   margin-top: 0;
 }
 
 li a{
@@ -250,28 +246,33 @@ div#cssMatrix {
    overflow: auto; /* Enable scroll if needed */
    background-color: rgb(0,0,0); /* Fallback color */
    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
- }
+}
  
- /* Modal Content */
- .modalContent {
-   background-color: #fefefe;
-   margin: auto;
-   padding: 20px;
-   border: 1px solid #888;
-   width: 80%;
- }
- 
- /* The Close Button */
- .close {
-   color: #aaaaaa;
-   float: right;
-   font-size: 28px;
-   font-weight: bold;
- }
- 
- .close:hover,
- .close:focus {
-   color: #000;
-   text-decoration: none;
-   cursor: pointer;
- }
+/* Modal Content */
+.modalContent {
+color: black;
+background-color: #fefefe;
+margin: auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+}
+
+.modalContent p {
+color: black;
+}
+
+/* The Close Button */
+.close {
+color: #aaaaaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
