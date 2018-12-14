@@ -120,6 +120,20 @@ div#cssMatrix {
    float: left;
 }
 
+.glow {
+   animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+   from {
+      text-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px red, 0 0 40px orange, 0 0 50px orange, 0 0 60px black, 0 0 70px black;
+   }
+   
+   to {
+   text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red, 0 0 80px red;
+   }
+}
+
 .hero-image {
    background-image: url('images/parchment.png');
    height: 1245px;
