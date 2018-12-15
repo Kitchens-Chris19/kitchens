@@ -110,7 +110,6 @@ div#cssMatrix {
    border: beige;
    box-shadow: 0 0 10px white;
    border-style: double;
-   animation: hover 2s ease-in-out infinite alternate;
 }
 
 #questionContainer {
