@@ -128,6 +128,13 @@ div#cssMatrix {
    z-index: 1;
 }
 
+.deathlyHallows {
+   background: black;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
 .glow {
    animation: glow 2s ease-in-out infinite alternate;
 }
