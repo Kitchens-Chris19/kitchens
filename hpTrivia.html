@@ -37,7 +37,7 @@
 </head>
 
 <body onload="start();">
-
+   <div id="sky"></div>
    <div id="leftDiv">
       <div id="playerInfo" class="glowBorder">
             <h2>Player Info</h2>
@@ -270,10 +270,10 @@
       }
 
       function stars() {
-         var body = document.getElementById('body');
+         var sky = document.getElementById('sky');
          for (var i = 0; i < 100; i++) {
             var star = '<div class="star" style="animation: twinkle ' + ((Math.random() * 5) + 5) + 's linear ' + ((Math.random() * 5) + 5) + 's infinite; top: ' + Math.random() * $(window).height() + 'px; left: ' + Math.random() * $(window).width() + 'px;"></div>';
-            body.append(star);
+            sky.append(star);
          }
       }
 
