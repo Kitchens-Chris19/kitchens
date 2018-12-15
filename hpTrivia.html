@@ -272,7 +272,7 @@
       function stars() {
          var sky = document.getElementById('sky');
          for (var i = 0; i < 100; i++) {
-            var star = createElement('div');
+            var star = document.createElement('div');
             star.className = "star";
             star.style.animation = 'twinkle ' 
             + ((Math.random() * 5) + 5) + 's linear ' + ((Math.random() * 5) + 5) 
