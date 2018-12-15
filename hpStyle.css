@@ -294,6 +294,10 @@ cursor: pointer;
 /* ************** */
 /* Deathy Hallows */
 /* ************** */
+#dhContainer {
+   transform: translateY(113px);
+   float: right;
+}
 .deathlyHallows {
    background: black;
    display: flex;
@@ -301,6 +305,7 @@ cursor: pointer;
    align-items: center;
    float: right;
    width: 450px;
+   height: 0;
 }
 
 .cloak {
@@ -423,7 +428,7 @@ cursor: pointer;
       transform: matrix(0.35, -0.15, 0.15, 0.35, -200, 350);
    }
    100% {
-      left: -1600px; 
+      left: 1600px; 
       top: -50%;
    }
 }
