@@ -45,10 +45,10 @@
             <p id="name">Name</p>
             <p id="house">House</p>
             <p id="points">0</p>
-            <button type="button" id="getData" onclick=getData()>Input Data</button> <br>
-            <button type="button" id="saveStorage" onclick=savePlayer()>Save</button> <br>
-            <button type="button" id="loadStorage" onclick=loadPlayer()>Load data</button> <br>
-            <button type="button" id="clear" onclick = localStorage.clear()>Clear player info</button> <br>
+            <button type="button" id="getData" onclick=getData()>New Player</button> <br>
+            <button type="button" id="saveStorage" onclick=savePlayer()>Save Player</button> <br>
+            <button type="button" id="loadStorage" onclick=loadPlayer()>Load Player</button> <br>
+            <button type="button" id="clear" onclick = localStorage.clear()>Clear Player</button> <br>
          </div>
    </div>
 
@@ -62,8 +62,10 @@
             A description of how the various topics were used in the making of this page:<br><br>
             CSS3 Animations:</p>
          <ul>
-            <li>Title of the page using an animation to continuously glow.</li>
+            <li>Title of the page using an animation to continuously glow. The win message uses the same.</li>
             <li>The quiz (parchment section) uses an animation to continuously hover.</li>
+            <li>The Player Info div glows whenever points are added via animation/resetting animation.</li>
+            <li>When you win the game, Harry goes flying.</li>
          </ul>
          <p>CSS3 Transitions:</p>
          <ul>
@@ -77,6 +79,7 @@
             <li>Use of transform: translate on the parchment image for positioning</li>
             <li>Use of transform: translate on the innertext of the parchment image for positioning</li>
             <li>Use of transform: none on the navbar to override other button settings</li>
+            <li>Use of transform: matrix on Harry</li>
          </ul>
       </div>
    </div>

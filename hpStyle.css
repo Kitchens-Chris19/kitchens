@@ -50,6 +50,9 @@ li a:hover {
 button {
    width: auto;
    height: auto;
+   font-family: 'Galdeano', fantasy, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   background-color: lightgoldenrodyellow;
+   border-color: burlywood;
 }
 
 button:hover {
