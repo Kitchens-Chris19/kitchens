@@ -176,9 +176,9 @@
                player.points += 10;
                document.getElementById('points').innerHTML = player.points;
                var glowy = document.getElementById('playerInfo');
+               glowy.classList.add('glowBorder');
                if(glowy.classList.contains('glowBorder')) {
                   glowy.classList.remove('glowBorder');
-                  glowy.classList.add('glowBorder');
                }
             }
             counter++;
