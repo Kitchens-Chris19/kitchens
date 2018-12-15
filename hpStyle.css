@@ -56,7 +56,8 @@ button {
 }
 
 button:hover {
-   transform: scale(0.97);
+   transform: matrix(0.97, -0.10, 0.10, 0.97, 0, 0);
+   transition: transform 1s;
 }
 
 div#hpDiv {
@@ -399,8 +400,28 @@ cursor: pointer;
 }
 
 @keyframes fly {
-   0%    {left: 0%; top: 0%;}
-   30%   {left: 25%; top: -30%;}
-   50%   {left: 1400px; top: -50%;}
-   100%  {left: 100%; top: -50%;}
+   0% {
+      left: 0%; 
+      top: 0%;
+      transform: matrix(0.35, -0.10, 0.10, 0.35, -200, 400);
+   }
+   30% {
+      left: 25%; 
+      top: -30%;
+      transform: matrix(0.35, 0, 0, 0.35, -200, 350);
+   }
+   40% {
+      left: 25%;
+      top: -30%;
+      transform: matrix(0.35, -0.25, 0.25, 0.35, -200, 350);
+   }
+   50% {
+      left: 25%; 
+      top: -30%;
+      transform: matrix(0.35, -0.15, 0.15, 0.35, -200, 350);
+   }
+   100% {
+      left: -1600px; 
+      top: -50%;
+   }
 }
