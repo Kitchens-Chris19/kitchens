@@ -336,13 +336,13 @@ cursor: pointer;
    border: 5px solid #fff;
    border-radius: 50%;
    position: relative;
-   left: -53px;
+   left: -200px;
    bottom: -41px;
    transition: left 1s;
 }
 
 .cloak:hover > .stone {
-   left: -200px;
+   left: -53px;
 }
 
 .wand {
@@ -351,12 +351,12 @@ cursor: pointer;
    background: #fff;
    position: absolute;
    top: 0px;
-   left: -2.5px;
+   left: 110px;
    transition: left 1s;
 }
 
 .cloak:hover > .wand {
-   left: 110px;
+   left: -2.5px;
 }
 
 /* *********** */
@@ -368,7 +368,7 @@ cursor: pointer;
    }
    
    to {
-   text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red, 0 0 80px red;
+      text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red, 0 0 80px red;
    }
 }
 
