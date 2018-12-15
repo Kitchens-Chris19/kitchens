@@ -298,6 +298,13 @@ cursor: pointer;
    transform: translateY(113px);
    float: right;
 }
+
+#dhText {
+   opacity: 0;
+   transform: translate(128px, 64px);
+   font-size: larger;
+}
+
 .deathlyHallows {
    background: black;
    display: flex;

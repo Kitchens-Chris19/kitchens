@@ -107,12 +107,12 @@
 
    <div id="dhContainer">
       <div class="deathlyHallows">
-         <div class="cloak" onmouseover="showDHText();">
+         <div class="cloak" onmouseover="showDHText(true);" onmouseout="showDHText(false);">
             <div class="stone"></div>
             <div class="wand"></div>
          </div>
       </div>
-      <p id="dhText" class="glow" style="display: none;">The Deathly Hallows</p>
+      <p id="dhText" class="glow">The Deathly Hallows</p>
    </div>
 
    <div class="hero-image">
@@ -254,9 +254,14 @@
          glowy.style.animation = null;
       }
 
-      function showDHText() {
+      function showDHText(show) {
          var x = document.getElementById('dhText');
-         x.style.display = "";
+         if(show) {
+            x.style.opacity = "1";
+         }
+         if(!show) {
+            x.style.opacity = "0";
+         }
       }
 
       function loadXML() {
