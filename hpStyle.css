@@ -154,7 +154,7 @@ div#cssMatrix {
 .winDiv {
    font-size: 100;
    font-family: 'Galdeano', fantasy, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   animation: glowGold 1s ease-in-out infinite alternate;
+   animation: glow 1s ease-in-out infinite alternate;
 }
 
 /* ************** */
