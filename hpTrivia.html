@@ -272,10 +272,18 @@
       function stars() {
          var sky = document.getElementById('sky');
          for (var i = 0; i < 100; i++) {
-            var star = '<div class="star" style="animation: twinkle ' 
+            var star = createElement('div');
+            star.className = "star";
+            star.style.animation = 'twinkle ' 
             + ((Math.random() * 5) + 5) + 's linear ' + ((Math.random() * 5) + 5) 
             + 's infinite; top: ' + Math.random() * 500 + 'px; left: ' 
-            + Math.random() * 1000 + 'px;"></div>';
+            + Math.random() * 1000 + 'px;'
+
+
+            // var star = '<div class="star" style="animation: twinkle ' 
+            // + ((Math.random() * 5) + 5) + 's linear ' + ((Math.random() * 5) + 5) 
+            // + 's infinite; top: ' + Math.random() * 500 + 'px; left: ' 
+            // + Math.random() * 1000 + 'px;"></div>';
             sky.appendChild(star);
          }
       }
