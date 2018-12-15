@@ -56,7 +56,7 @@ button {
 }
 
 button:hover {
-   transform: matrix(0.97, -0.10, 0.10, 0.97, 0, 0);
+   transform: matrix(0.97, 0.10, -0.10, 0.97, 0, 0);
    transition: transform 1s;
 }
 
@@ -335,7 +335,7 @@ cursor: pointer;
    transition: left 1s;
 }
 
-.veil:hover > .stone {
+.cloak:hover > .stone {
    left: -200px;
 }
 
@@ -349,7 +349,7 @@ cursor: pointer;
    transition: left 1s;
 }
 
-.veil:hover > .wand {
+.cloak:hover > .wand {
    left: 110px;
 }
 
