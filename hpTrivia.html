@@ -152,6 +152,7 @@
 
       function savePlayer() {
          localStorage.setItem("player", JSON.stringify(player));
+         infoChange();
       }
 
       function loadPlayer() {
@@ -160,6 +161,7 @@
             document.getElementById("name").innerHTML = player.name;
             document.getElementById("house").innerHTML = player.house;
             document.getElementById("points").innerHTML = player.points;
+            infoChange();
          } else {
             alert("No players in storage.");
          }
@@ -180,6 +182,7 @@
          document.getElementById('house').innerHTML = player.house;
          var x = document.getElementById('getData');
          x.setAttribute('disabled', '');
+         infoChange();
       }
 
       function youWin() {
@@ -208,7 +211,7 @@
             if(player!=null) {
                player.points += 10;
                document.getElementById('points').innerHTML = player.points;
-               pointsChange();
+               infoChange();
             }
             counter++;
             if (counter < 5) {
@@ -243,7 +246,7 @@
          document.getElementById("hd").innerHTML = data[4].innerHTML;
       }
 
-      function pointsChange() {
+      function infoChange() {
          var glowy = document.getElementById('playerInfo');
          glowy.style.animation = "none";
          glowy.offsetHeight;
@@ -255,14 +258,14 @@
          var xhttp = new XMLHttpRequest();
          xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-               myFunction(this);
+               xmlToTable(this);
             }
          };
          xhttp.open("GET", "quiz.xml", true);
          xhttp.send();
       }
 
-      function myFunction(xml) {
+      function xmlToTable(xml) {
          var i;
          var xmlDoc = xml.responseXML;
          var table = "<tr><th>Question</th><th>AnswerA</th><th>AnswerB</th><th>AnswerC</th><th>AnswerD</th><th>CorrectAnswer</th></tr>";
