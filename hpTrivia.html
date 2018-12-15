@@ -44,7 +44,7 @@
             <h2>Player Info</h2>
             <p id="name">Name</p>
             <p id="house">House</p>
-            <p id="points" onchange="pointsChange();">0</p>
+            <p id="points">0</p>
             <button type="button" id="getData" onclick=getData()>Input Data</button> <br>
             <button type="button" id="saveStorage" onclick=savePlayer()>Save</button> <br>
             <button type="button" id="loadStorage" onclick=loadPlayer()>Load data</button> <br>
@@ -175,6 +175,7 @@
             if(player!=null) {
                player.points += 10;
                document.getElementById('points').innerHTML = player.points;
+               pointsChange();
             }
             counter++;
             if (counter < 5) {
