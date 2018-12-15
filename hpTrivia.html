@@ -40,7 +40,7 @@
 
    <div id="leftDiv">
       <button id="loadBtn" type="button" onclick="loadQuiz(counter);" style="float: left; position: absolute;">Load Quiz</button>
-      <div id="playerInfo">
+      <div id="playerInfo" class="glowBorder">
             <h2>Player Info</h2>
             <p id="name">Name</p>
             <p id="house">House</p>
@@ -212,7 +212,9 @@
 
       function pointsChange() {
          var glowy = document.getElementById('playerInfo');
-         glowy.style.animation = "glowBorder 2s";
+         glowy.style.animation = "none";
+         glowy.offsetHeight;
+         glowy.style.animation = null;
       }
 
       function loadXML() {
