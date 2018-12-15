@@ -129,13 +129,6 @@ div#cssMatrix {
    z-index: 1;
 }
 
-.deathlyHallows {
-   background: black;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
 .glow {
    animation: glow 2s ease-in-out infinite alternate;
 }
@@ -301,7 +294,15 @@ cursor: pointer;
 /* ************** */
 /* Deathy Hallows */
 /* ************** */
-.veil {
+.deathlyHallows {
+   background: black;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   float: right;
+}
+
+.cloak {
    width: 0;
    height: 0;
    border-right: 80px solid transparent;
@@ -310,7 +311,7 @@ cursor: pointer;
    position: relative;
 }
 
-.veil:after {
+.cloak:after {
    width: 0;
    height: 0;
    border-right: 90px solid transparent;
