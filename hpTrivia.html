@@ -40,11 +40,11 @@
 
    <div id="leftDiv">
       <button id="loadBtn" type="button" onclick="loadQuiz(counter);" style="float: left; position: absolute;">Load Quiz</button>
-      <div id="playerInfo">
+      <div id="playerInfo" class="glowBorder">
             <h2>Player Info</h2>
             <p id="name">Name</p>
             <p id="house">House</p>
-            <p id="points">0</p>
+            <p id="points" onchange="pointsChange();">0</p>
             <button type="button" id="getData" onclick=getData()>Input Data</button> <br>
             <button type="button" id="saveStorage" onclick=savePlayer()>Save</button> <br>
             <button type="button" id="loadStorage" onclick=loadPlayer()>Load data</button> <br>
@@ -175,11 +175,6 @@
             if(player!=null) {
                player.points += 10;
                document.getElementById('points').innerHTML = player.points;
-               var glowy = document.getElementById('playerInfo');
-               glowy.classList.add('glowBorder');
-               if(glowy.classList.contains('glowBorder')) {
-                  glowy.classList.remove('glowBorder');
-               }
             }
             counter++;
             if (counter < 5) {
@@ -212,6 +207,14 @@
          document.getElementById("hb").innerHTML = data[2].innerHTML;
          document.getElementById("hc").innerHTML = data[3].innerHTML;
          document.getElementById("hd").innerHTML = data[4].innerHTML;
+      }
+
+      function pointsChange() {
+         var glowy = document.getElementById('playerInfo');
+         if (glowy.classList.contains('glowBorder')) {
+            glowy.classList.remove('glowBorder');
+            glowy.classList.add('glowBorder');
+         }
       }
 
       function loadXML() {
