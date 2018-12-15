@@ -154,10 +154,13 @@
          x.style.display = "none";
 
          var d = document.createElement("div");
-         d.style.fontSize = "70";
+         d.className = "winDiv";
          d.innerHTML = "YOU WIN!!!";
 
          document.getElementById("hpDiv").appendChild(d);
+
+         var flyer = document.getElementById('hpBroom');
+         flyer.style.animation = "fly 7s";
 
       }
 
