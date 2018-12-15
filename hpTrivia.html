@@ -40,7 +40,7 @@
 
    <div id="leftDiv">
       <button id="loadBtn" type="button" onclick="loadQuiz(counter);" style="float: left; position: absolute;">Load Quiz</button>
-      <div id="playerInfo" class="glowBorder">
+      <div id="playerInfo">
             <h2>Player Info</h2>
             <p id="name">Name</p>
             <p id="house">House</p>
@@ -175,6 +175,11 @@
             if(player!=null) {
                player.points += 10;
                document.getElementById('points').innerHTML = player.points;
+               var glowy = document.getElementById('playerInfo');
+               if(glowy.classList.contains('glowBorder')) {
+                  glowy.classList.remove('glowBorder');
+                  glowy.classList.add('glowBorder');
+               }
             }
             counter++;
             if (counter < 5) {
