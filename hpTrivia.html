@@ -294,11 +294,13 @@
 
       function stars() {
          var sky = document.getElementById('sky');
-         var topNum = (Math.random() * 500).toFixed(0).toString();
-         var leftNum = (Math.random() * 1000).toFixed(0).toString();
+         var topNum;
+         var leftNum;
          var animateTime = ((Math.random() * 5) + 5).toFixed(0).toString();
-         
+
          for (var i = 0; i < 100; i++) {
+            topNum = (Math.random() * 500).toFixed(0).toString();
+            leftNum = (Math.random() * 1000).toFixed(0).toString();
             var star = document.createElement('div');
             star.className = "star";
             star.style.animation = 'twinkle ' + animateTime + 's linear ' + animateTime + 's infinite';
