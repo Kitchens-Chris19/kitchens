@@ -297,15 +297,13 @@
          var topNum = (Math.random() * 500).toFixed(0).toString();
          var leftNum = (Math.random() * 1000).toFixed(0).toString();
          var animateTime = ((Math.random() * 5) + 5).toFixed(0).toString();
-         var animateName = 'twinkle ' + animateTime + 's linear ' + animateTime + 's infinite;';
-         var topStupidCssStringSyntax = topNum + 'px;';
-         var leftStupidCssStringSyntax = leftNum + 'px;';
+         
          for (var i = 0; i < 100; i++) {
             var star = document.createElement('div');
             star.className = "star";
             star.style.animation = 'twinkle ' + animateTime + 's linear ' + animateTime + 's infinite';
-            star.style.top = topStupidCssStringSyntax; 
-            star.style.left = leftStupidCssStringSyntax;
+            star.style.top = topNum + 'px'; 
+            star.style.left = leftNum + 'px';
 
 
             // var star = '<div class="star" style="animation: twinkle ' 
