@@ -296,11 +296,12 @@
          var sky = document.getElementById('sky');
          var topNum;
          var leftNum;
-         var animateTime = ((Math.random() * 5) + 5).toFixed(0).toString();
+         var animateTime;
 
          for (var i = 0; i < 200; i++) {
             topNum = (Math.random() * 500).toFixed(0).toString();
             leftNum = (Math.random() * 2000).toFixed(0).toString();
+            animateTime = ((Math.random() * 5) + 5).toFixed(0).toString()
             var star = document.createElement('div');
             star.className = "star";
             star.style.animation = 'twinkle ' + animateTime + 's linear ' + animateTime + 's alternate infinite none running';
