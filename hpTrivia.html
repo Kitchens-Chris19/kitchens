@@ -63,45 +63,59 @@
          <h1>A description of how the various topics were used in the making of this page:</h1><br><br>
          <p>CSS3 Animations:</p>
          <ul>
-            <li>Title of the page using an animation to continuously glow. The win message uses the same.</li>
+            <li>Title of the quiz, win text, and Deathly Hallows text using an animation to continuously glow.</li>
             <li>The quiz (parchment section) uses an animation to continuously hover.</li>
-            <li>The Player Info div glows whenever points are added via animation/resetting animation.</li>
+            <li>The Player Info div glows whenever points are added and in response to player changes via animation/resetting animation.</li>
             <li>When you win the game, Harry goes flying.</li>
          </ul>
          <p>CSS3 Transitions:</p>
          <ul>
-            <li></li>
+            <li>Button matrix transform is set on a transition timer of 1s.</li>
+            <li>Deathly Hallows text opacity transition set to 1s.</li>
+            <li>Deathly Hallows stone movement left transition set to 1s.</li>
+            <li>Deathly Hallows wand movement left transition set to 1s.</li>
          </ul>
          <p>CSS3 Transforms:</p>
          <ul>
-            <li>Use of transform: scale on buttons when you hover over them.</li>
-            <li>Use of transform: translate on the playerInfo div for positioning</li>
-            <li>Use of transform: translate on the questionContainer for positioning</li>
-            <li>Use of transform: translate on the parchment image for positioning</li>
-            <li>Use of transform: translate on the innertext of the parchment image for positioning</li>
-            <li>Use of transform: none on the navbar to override other button settings</li>
-            <li>Use of transform: matrix on Harry</li>
+            <li>Use of transform: translate within hover animations.</li>
+            <li>Use of transform: matrix within Harry flying animation.</li>
+            <li>Use of transform: matrix on buttons when you hover over them.</li>
+            <li>Use of transform: translate on the playerInfo div for positioning.</li>
+            <li>Use of transform: translate on the questionContainer for positioning.</li>
+            <li>Use of transform: translate on the parchment image for positioning.</li>
+            <li>Use of transform: translate on the innertext of the parchment image for positioning.</li>
+            <li>Use of transform: none on the navbar to override other button settings.</li>
+            <li>Use of transform: matrix on Harry image.</li>
+            <li>Use of transform: translate on Deathly Hallows container and text for positioning.</li>
          </ul>
          <p>JavaScript</p>
-         <ul> Object
-            <li></li>
-         </ul>
          <ul>
-            Array
-            <li></li>
-         </ul>
-         <ul>
-            JSON
-            <li></li>
-         </ul>
-         <ul>
-            Events
-            <li></li>
+            <li>The Player is saved as an object.</li>
+            <li>JSON is used to save/load the player object.</li>
+            <li>Body uses onload to retrieve the quiz information via AJAX.</li>
+            <li>Buttons have onclick function calls to save/load/clear player information, load the quiz on the screen, present this modal, and submit answers to questions.</li>
+            <li>The Deathly Hallows react with onmouseover and onmouseout to either show or hide text.</li>
+            <li>Loops for loading questions on screen and into table.</li>
+            <li>Many different functions for controlling most things mentioned in this modal.</li>
          </ul>
          <p>AJAX</p>
+         <ul>
+            <li>AJAX is used to retrieve the quiz questions and answers from an xml file and load them into a table for later use.</li>
+         </ul>
          <p>DOM</p>
+         <ul>
+            <li>The questions/answers are updated by changing their inner text.</li>
+            <li>Player Info is referenced by its ID for use in multiple functions.</li>
+            <li>Text elements/buttons are hidden/shown based on events and conditions.</li>
+         </ul>
          <p>Tags</p>
+         <ul>
+            <li>Images used for background, Harry, and parchment.</li>
+         </ul>
          <p>Local Storage</p>
+         <ul>
+            <li>Player information, including name, House, and score are saved in Local Storage and accessed with buttons.</li>
+         </ul>
       </div>
    </div>
 
