@@ -408,11 +408,11 @@
       }
       
       // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-        if (event.target == modalRef) {
-          modalRef.style.display = "none";
-        }
-      }
+      // window.onclick = function(event) {
+      //   if (event.target == modalRef) {
+      //     modalRef.style.display = "none";
+      //   }
+      // }
 
       // Site description modal
       // Get the modal
@@ -436,7 +436,7 @@
       
       // When the user clicks anywhere outside of the modal, close it
       window.onclick = function(event) {
-        if (event.target == modal) {
+        if (event.target == modal || event.target == modalRef) {
           modal.style.display = "none";
         }
       }
